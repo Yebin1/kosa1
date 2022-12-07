@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        .democlass {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <h1 class="democlass">Hello World_1</h1>
+        <h1 class="democlass">Hello World_2</h1>
+        <h1 class="democlass">Hello World_3</h1>
+
+    </div>
+
+</body>
+<script type="text/javascript">
+    // document.getElementsByTagName("h1")[0].removeAttribute("class");
+    /*
+        let harr = document.getElementsByTagName("h1");
+        console.log(harr);
+        for (let i = 0; i < harr.length; i++) {
+            harr[i].removeAttribute("class");
+        }
+    */
+
+    /*
+    let arr = document.getElementsByTagName("h1");
+    for (let index in arr) {
+        console.log(arr[index]);
+        console.log("index: " + index + " -length: " + arr.length);
+        document.getElementById("div").removeChild(arr[index]);
+        // 삭제 순서: 0 - 1 - 2
+
+        // [0] [1] [2]
+        // [Hello World_1] [Hello World_2] [Hello World_3]
+
+        // [0] [1]
+        // [Hello World_2] [Hello World_3]
+    }
+    
+
+    let arr = document.getElementsByTagName("h1");
+    for (let index in arr) {
+        document.getElementById("div").removeChild(arr[arr.length-1]);
+    }
+    */
+
+    // 자기 자신 삭제
+    let arr = document.getElementsByTagName("h1");
+    let len = arr.length; // 3
+    for (let i = 0; i < len; i++) {
+        // remove() 자기 자신 삭제
+        arr[arr.length - 1].remove();
+    }
+
+
+
+
+</script>
+
+</html>

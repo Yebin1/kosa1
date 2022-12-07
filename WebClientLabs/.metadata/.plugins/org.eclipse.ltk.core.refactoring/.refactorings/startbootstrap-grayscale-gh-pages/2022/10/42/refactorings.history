@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;webapp&apos;&#x0D;&#x0A;- Original project: &apos;startbootstrap-grayscale-gh-pages&apos;&#x0D;&#x0A;- Destination element: &apos;webapp&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     index.html&#x0D;&#x0A;     js&#x0D;&#x0A;     css&#x0D;&#x0A;     assets" description="Copy elements" element1="index.html" element2="js" element3="css" element4="assets" files="1" flags="589830" folders="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1665619289753" target="/aaa/src/main/webapp" units="0" version="1.0"/>
+</session>

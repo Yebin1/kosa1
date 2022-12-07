@@ -1,0 +1,7 @@
+127.0.0.1 - - [08/Nov/2022:15:12:37 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:15:12:39 +0900] "GET /WebServlet_92_Board_Model1/index.jsp HTTP/1.1" 200 1531
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:15:12:39 +0900] "GET /WebServlet_92_Board_Model1/style/default.css HTTP/1.1" 200 2866
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:15:12:39 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:15:12:45 +0900] "GET /WebServlet_92_Board_Model1/board/board_list.jsp HTTP/1.1" 200 3937
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:15:12:45 +0900] "GET /WebServlet_92_Board_Model1/board/board_write.jsp HTTP/1.1" 200 4534
+0:0:0:0:0:0:0:1 - - [08/Nov/2022:15:12:45 +0900] "GET /WebServlet_92_Board_Model1/ckeditor/ckeditor.js HTTP/1.1" 404 862

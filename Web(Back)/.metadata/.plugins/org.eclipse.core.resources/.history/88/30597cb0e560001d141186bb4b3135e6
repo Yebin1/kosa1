@@ -1,0 +1,26 @@
+package kr.or.kosa.service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+
+public class BoardDeleteOk implements Action {
+	
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+
+		String msg = "";
+		String url = "";
+		ActionForward forward = null;
+		
+		String idx = request.getParameter("idx");
+		String pwd = request.getParameter("pwd");
+		
+		BoardDao dao = new BoardDao();
+	
+		
+		return forward;
+	}
+}

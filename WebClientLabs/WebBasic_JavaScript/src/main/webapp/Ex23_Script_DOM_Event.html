@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table,
+		td,
+		th {
+			border-collapse: collapse;
+		}
+
+		td,
+		th {
+			border: 1px solid rgb(55, 66, 128);
+		}
+
+		td {
+			background-color: rgb(239, 246, 255);
+		}
+	</style>
+</head>
+
+<body>
+	<div id="div">
+		행의 수 : <input type="text" id="txtrow" name="txtrow" value="2"><br>
+		열의 수 : <input type="text" id="txtcolumn" name="txtcolumn" value="3"><br>
+		<input type="button" id="b1" value="동적테이블 생성">
+		<input type="button" id="b2" value="동적테이블 제거">
+
+	</div>
+</body>
+<script type="text/javascript">
+	/*
+	 <tr>	 테이블의 행을 만드는 태그
+	 <td>	 테이블의 열을 만드는 태그
+	*/
+
+	document.getElementById("b1").onclick = function () {
+		//let row = txtrow.getAttribute("value");
+		//let column = txtcolumn.getAttribute("value");
+
+		let row = document.getElementById('txtrow').value;
+		let column = document.getElementById('txtcolumn').value;
+
+		console.log(row);
+		console.log(column);
+
+		let table = document.createElement("table");
+		for (let i = 0; i < row; i++) {
+			let tr = document.createElement("tr");
+			for (let j = 0; j < column; j++) {
+				let td = (i == 0) ?
+					document.createElement("th") :
+					document.createElement("td");
+				let val = document.createTextNode(i + 1 + "행" + (j + 1) + "열");
+				td.appendChild(val);
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+		}
+		document.body.appendChild(table);
+	}
+
+	document.getElementById("b2").onclick = function () {
+		let arr = document.getElementsByTagName('table');
+		let len = arr.length;//3
+			//remove() 자기자신 삭제
+		if(len>0){
+			arr[arr.length-1].remove();
+		} else {
+			alert('테이블이 없습니다');
+		}
+	}
+
+
+</script>
+
+</html>

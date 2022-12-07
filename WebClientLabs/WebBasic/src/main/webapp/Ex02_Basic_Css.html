@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS 적용하기</title>
+<!-- Internal 방식(page 내부) -->
+<style type="text/css">
+body {
+	background-color: #e8e8e8;
+}
+
+body {
+	color: blue;
+}
+</style>
+<!-- External 방식 -->
+<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<!--
+	Cascading Style Sheets (CSS) is used to format the layout of a webpage.
+
+	CSS can be added to HTML documents in 3 ways:
+
+	Html 파일에 CSS를 적용하는 3가지 방법
+	1. Inline - by using the style attribute inside HTML elements
+	2. Internal - by using a <style> element in the <head> section
+	3. External - by using a <link> element to link to an external CSS file
+	-->
+
+	<h3>1. Inline 방식(태그 안쪽: style)</h3>
+	<p style="background-color: yellow;">인라인 방식</p>
+	<h3 style="color: green;">인라인 방식2</h3>
+	<h3>파란색</h3> <!-- Inline이 우선 적용 -->
+	external
+	<h1>외부 파일 참조</h1>
+	
+	<h3>웹상에서의 절대경로</h3>
+	<img alt="" src="https://www.baemin.com/_next/static/images/img-present@2x.png" width="300" height="300">
+
+</body>
+</html>

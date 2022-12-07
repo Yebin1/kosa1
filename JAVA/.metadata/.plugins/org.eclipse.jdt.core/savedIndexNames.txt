@@ -1,0 +1,18 @@
+INDEX VERSION 1.131+C:\KOSA_IT\JAVA\Labs\.metadata\.plugins\org.eclipse.jdt.core
+1424422155.index
+1981512536.index
+2506192191.index
+450044671.index
+313289141.index
+627414544.index
+1865797976.index
+1827495120.index
+1657330681.index
+3411065301.index
+265506711.index
+280782805.index
+4164309030.index
+1426854757.index
+3812288542.index
+722609791.index
+3689197798.index

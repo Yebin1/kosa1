@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        /*
+        https://www.w3schools.com/jsref/dom_obj_event.asp
+        >> JAVA
+        try {
+            0/0 >> 예외 발생 >> 예외에 해당하는 객체가 자동 생성 (정보가 담김)
+            생성된 예외 객체의 주소를 변수 e가 받음 
+        } catch(Exception e)
+
+        문제가 발생하면 자동 객체 생성 >> 문제에 정보가 담긴다 >> 해당 객체를 가지고 ...
+        
+        javascript >> 사건 발생 (click, mouseover) >> 내부적으로 객체 하나 생성
+        Event 객체 >> 사건에 대한 정보 (누가 일으켰는지, 주체는 무엇인지, 어떤 영향을 주는지 ...)
+        ** 자동으로 생성된 event 객체의 주소를 받아 사용
+        
+        window.event.메소드 >> 제공
+        window.event.속성 >> 제공
+
+        key point: event 객체가 가지고 있는 메소드, 속성
+
+        */
+
+        window.onload = function () {
+            let btn = document.getElementById("mybtn");
+            btn.onclick = function (e) { // e 변수가 event 객체의 주소값을 받을 수 있음
+                console.log(e.type); // Event 객체가 가지고 있는 타입
+                console.log(e.target); // <span>눌러봐</span>
+                console.log(e.currentTarget); // <button id="mybtn"><span>눌러봐</span></button>
+                console.log(e.x); // 클릭 좌표값
+                console.log(e.y);
+            }
+            let btn2 = document.getElementById("mybtn2");
+            let handler = function (event) { // event 객체의 주소 전달 받음
+                switch (event.type) {
+                    case "click": alert("클릭");
+                        break;
+                    case "mouseover": event.target.style.backgroundColor = "red";
+                        break;
+                    case "mouseout": event.target.style.backgroundColor = "";
+                        break;
+
+                }
+            }
+            // event 거는 법
+            btn2.onclick = handler;
+            btn2.onmouseover = handler;
+            btn2.onmouseout = handler;
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <button id="mybtn"><span>눌러봐</span></button>
+    <br><br>
+    <button id="mybtn2">누르지마</button>
+</body>
+
+</html>

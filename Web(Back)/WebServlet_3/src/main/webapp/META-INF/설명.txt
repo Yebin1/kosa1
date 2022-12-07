@@ -1,0 +1,23 @@
+1. Model2 기반 MVC 패턴 적용 웹 프로젝트
+
+Model1 >> 요청을 JSP가 받아 처리
+Model2 >> 요청을 Servlet이 받아 처리
+
++ MVC 패턴
+
+Model: JAVA 클래스 >> DTO, DAO (JDBC)
+View: html, jsp (EL & JSTL)
+Controller: servlet (웹용 자바 파일)
+
+JSP 없던 시절 >> Servlet으로 모든 것 >> UI 담당
+
+DB 작업
+create table memo(
+id varchar2(20) not null,
+email varchar2(20) not null,
+content varchar2(100)
+);
+
+desc memo;
+
+1. 드라이버

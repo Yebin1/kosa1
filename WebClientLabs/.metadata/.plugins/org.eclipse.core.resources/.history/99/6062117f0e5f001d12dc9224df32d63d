@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+// 객체를 json 객체로 변환
+// 1. JSONObject 사용 >> {} 객체 하나 생성
+// 2. JSONArray 사용 >> [{}, {}, {}]
+
+Member member = new Member();
+%>

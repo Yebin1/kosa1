@@ -1,0 +1,46 @@
+package kr.or.kosa.service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.BoardDao;
+import kr.or.kosa.dto.Board;
+
+public class BoardListService implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		String writer = request.getParameter("writer");
+		String pwd = request.getParameter("pwd");
+		String subject = request.getParameter("subject");
+		String content = request.getParameter("content");
+		String filename = request.getParameter("filename");
+		int filesize = Integer.parseInt(request.getParameter("filesize"));
+		String homepage = request.getParameter("homepage");
+		String email = request.getParameter("email");
+
+		Board board = new Board();
+		BoardDao dao = new BoardDao();
+		
+		board.setWriter(writer);
+		board.setPwd(pwd);
+		board.setSubject(subject);
+		board.setContent(content);
+		board.setFilename(filename);
+		board.setFilesize(filesize);
+		board.setHomepage(homepage);
+		board.setEmail(email);
+		
+		int result = dao.writeok(board);
+
+		ActionForward forward = new ActionForward();
+		forward.setRedirect(false);
+		forward.setPath("/WEB-INF/board/redirect.jsp");
+		
+		return forward;
+	}
+
+}

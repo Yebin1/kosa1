@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.profile {
+    position: center !important;
+    width: 250px !important;
+    height: 250px !important;
+    filter: drop-shadow(3px 3px 5px);
+}
+
+/* .navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: rgb(87, 87, 87) !important;
+} */
+
+@font-face {
+    font-family: 'tamoro';
+    src: url('../fonts/fonts/TamoroScript_PersonalUseOnly.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: '210m';
+    src: url('../fonts/fonts/210옴니굴림020.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kopubbatang';
+    src: url('../fonts/fonts/KoPubWorld Batang_Pro_Light.otf') format('opentype');
+}
+
+.myname {
+    font-family: "kopubbatang" !important;
+    font-size: 5rem;
+    font-weight: 400;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    text-decoration-line: none !important;
+}
+
+.aboutme {
+    font-family: '210m' !important;
+    font-size: 1rem;
+    transform: translate(0%, -150%);
+}

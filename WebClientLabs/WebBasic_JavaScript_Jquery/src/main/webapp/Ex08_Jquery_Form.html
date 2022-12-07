@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(function () {
+			// Form 안의 요소 Jquery
+			$('#txtname').val('hong');
+			console.log($('#txtname').val());
+
+			// 1. radio 기본값 설정하기 (checked) 속성
+			$('input:radio').val(['F']);
+			// F값을 가진 요소를 선택 (checked) 하겠다
+			// radio의 name 속성이 같아서 배열로 판단하기 때문에 ['F']로 써야함
+			// value M, F >> checked 처리 하겠다
+
+			// 여러 개의 radio 태그가 있을 경우 첫번째 값
+			console.log($('input:radio').val()); // M
+
+			console.log($('input:checked').val()); // F
+
+			// 여러 개의 radio가 있으면
+			// name이 gender인 라디오 중 checked인 것
+			console.log($('input:radio[name=gender]:checked').val());
+
+			// select
+			// 단일 선택 기준
+			// 선택된 option 태그의 value값
+			console.log($('#isF').val());
+			// option selected
+			$('#isF').val('oracle');
+
+			// 다중 선택이 가능한 select 태그 >> 배열
+			// multiple 접근성 문제로 사용 X
+			$('#isF2').val(['java', 'oracle']);
+
+			// btnok 클릭하면 isF2에 선택된 요소 값 모두 출력
+			$('#btnok').click(function () {
+				let data = $('#isF2').val();
+				console.log(data);
+				alert(data);
+				for(let index in data) {
+					console.log("value: " + data[index]);
+				}
+			});
+
+			if ($('#myform').children().is('input:submit')) {
+				console.log("true");
+			} else {
+				console.log("false");
+			}
+
+		});
+
+
+	</script>
+</head>
+
+<body>
+	Textbox :
+	<input type="text" id="txtname">
+	<br> RadioButton : Checked 속성
+	<input type="radio" name="gender" value="M">남
+	<input type="radio" name="gender" value="F">여
+	<br> Dropdownlist(select 태그)
+	<select id="isF">
+		<option value="java">자바</option>
+		<option value="jsp">웹</option>
+		<option value="oracle">오라클</option>
+	</select>
+	<br> Dropdownlist(select 태그)
+	<select id="isF2" multiple="multiple" size="3">
+		<option value="java">자바</option>
+		<option value="jsp">웹</option>
+		<option value="oracle">오라클</option>
+	</select>
+	<br>
+	<input type="button" value="확인" id="btnok">
+	<br>
+	<div id="myform">
+		submit button : <input type="submit" value="전송">
+	</div>
+</body>
+
+</html>

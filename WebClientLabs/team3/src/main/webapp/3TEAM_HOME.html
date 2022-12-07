@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>3조 홈페이지</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/3TEAM.css" rel="stylesheet">
+<script src="js/3TEAM.js"></script>
+<style type="text/css">
+.btn-primary {
+	color: #fff;
+	background-color: #64a19d;
+	border-color: #64a19d;
+}
+
+.btn-primary:hover {
+	color: #fff;
+	background-color: #558985;
+	border-color: #50817e;
+}
+</style>
+<link rel="stylesheet" href="css/3TEAM1.css">
+<link rel="stylesheet" href="css/3TEAM2.css">
+<link rel="stylesheet" href="css/3TEAM3.css">
+<link rel="icon" type="image/x-icon" href="images/3_TEAM_Heart.jpg">
+<link rel="stylesheet" href="css/3TEAM_HOME_CSS.css">
+<!-- CSS 적용 순서 중요!! -->
+<script src="https://kit.fontawesome.com/21b939066c.js"
+	crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/def66b134a.js"
+	crossorigin="anonymous"></script>
+<!-- 드래그 & 드롭 함수 -->
+<script type="text/javascript">
+	function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+</script>
+
+<!-- 로컬스토리지 버튼 누른 횟수 저장 -->
+<script>
+	function clickCounter() {
+		if (typeof (Storage) !== "undefined") {
+			if (localStorage.clickcount) {
+				localStorage.clickcount = Number(localStorage.clickcount) + 1;
+			} else {
+				localStorage.clickcount = 1;
+			}
+			document.getElementById("result").innerHTML = "당신이 버튼을 클릭한 횟수는 <" + localStorage.clickcount + "> 회 입니다.";
+		} else {
+			document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+		}
+	}
+</script>
+<!-- document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+			}
+		}
+	</script> -->
+</head>
+
+<body class="w3-black">
+	<!-- Icon Bar (Sidebar - hidden on small screens) -->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+		<!-- Avatar image in top left corner -->
+		<img id="heart" src="../images/3_TEAM_Heart.jpg"> <a href="#"
+			class="w3-bar-item w3-button w3-padding-large w3-black"> <i
+			class="fa fa-home w3-xxlarge"></i>
+			<p>HOME</p>
+		</a> <a href="#SIGN_IN"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i
+			class="fa fa-user w3-xxlarge"></i>
+			<p>SIGN IN</p>
+		</a> <a href="#MINI_GAME"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i
+			class="fa-solid fa-gamepad w3-xxlarge"></i>
+			<p>MINI GAME</p> </a> <a href="#About_US"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i
+			class="fa-brands fa-github w3-xxlarge"></i>
+			<p>ABOUT US</p> </a> <a href="#contact"
+			class="w3-bar-item w3-button w3-padding-large w3-hover-black"> <i
+			class="fa fa-envelope w3-xxlarge"></i>
+			<p>CONTACT</p>
+		</a>
+	</nav>
+
+	<!-- Navbar on small screens (Hidden on medium and large screens) -->
+	<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+		<div
+			class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+			<a href="#" class="w3-bar-item w3-button" id="home">HOME</a> <a
+				href="#SIGN_IN" class="w3-bar-item w3-button">SIGN IN</a> <a
+				href="#MINI_GAME" class="w3-bar-item w3-button">MINI GAME</a> <a
+				href="#MINI_GAME" class="w3-bar-item w3-button">ABOUT US</a> <a
+				href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+		</div>
+	</div>
+
+	<!-- Page Content -->
+	<div class="w3-padding-large" id="main">
+		<!-- Header/Home -->
+		<header class="w3-container w3-padding-32 w3-center w3-black"
+			id="home">
+			<h1 class="w3-jumbo">
+				<span id="title3" class="w3-hide-small">3 조 홈페이지</span>
+			</h1>
+			<p>3조와 함께 하세요</p>
+			<img src="../images/KakaoTalk_20220726_023511513.jpg" alt="boy"
+				class="w3-image" width="992" height="1108">
+		</header>
+
+		<!-- About Section -->
+		<div class="w3-content w3-justify w3-text-grey w3-padding-64"
+			id="SIGN_IN">
+			<h2 class="w3-text-light-grey">Sign In</h2>
+			<hr class="w3-opacity">
+			<p>3조 조원이 되시면 다양한 제휴 서비스를 하나의 아이디로 이용하실 수 있습니다.</p>
+			<h3 class="w3-padding-16 w3-text-light-grey">My Info</h3>
+			<p class="w3-wide">Email Address</p>
+			<span id="email_id_input" class="inp_bx sel"> <span
+				id="idInput" class="inp_txt"> <input type="text"
+					name="email_id" id="email_id" maxlength="45" value="" class="inp"
+					autocomplete="off" title="이메일 주소" placeholder="Email Address"
+					onfocus="onClassName('email_id_input');"
+					onblur="this.value=this.value.trim().toLowerCase();offClassName('email_id_input');validateEmailId(false);"
+					required />
+
+			</span>
+				<p id="email_msg" class="error_txt" role="alert" aria-live="off"></p>
+			</span>
+
+			<p class="w3-wide">Password</p>
+			<span id="pw_input" class="inp_bx"> <span class="inp_txt">
+					<input type="password" class="inp" placeholder="Password"
+					title="비밀번호" name="pw" id="pw" maxlength="15" autocomplete="off"
+					autocapitalize="none" onchange="validatePW(false);"
+					onfocus="onClassName('pw_input');
+            validateEmailId(false);"
+					onkeypress="isCapslock(event, 'span_capslock');"
+					onblur="offCapslock('span_capslock');" required />
+
+			</span>
+				<p id="pw_msg" class="error_txt" role="alert" aria-live="off"></p>
+			</span>
+
+			<p class="w3-wide">Password Re:Enter</p>
+			<span id="pw_input" class="inp_bx"> <span class="inp_txt">
+					<input type="password" class="inp" placeholder="Password Re:Enter"
+					title="비밀번호" name="pw" id="pw" maxlength="15" autocomplete="off"
+					autocapitalize="none" onchange="validatePW(false);"
+					onfocus="onClassName('pw_input');
+            validateEmailId(false);"
+					onkeypress="isCapslock(event, 'span_capslock');"
+					onblur="offCapslock('span_capslock');" required />
+
+			</span>
+				<p id="pw_msg" class="error_txt" role="alert" aria-live="off"></p>
+			</span>
+
+			<button type="button" id="submitbtn" class="btn btn-light">등록하기</button>
+			<button class="btn btn-primary disabled" id="submitButton"
+				type="submit"
+				onclick="printPhone(); printEmail(); printAddress(); toggleClearbutton();">Enter</button>
+
+
+		</div>
+
+		<!-- Minigame Section -->
+		<div class="w3-padding-64 w3-content w3-text-grey" id="MINI_GAME">
+			<h2 class="w3-text-light-grey">Mini Game</h2>
+			<hr class="w3-opacity">
+
+			<!-- 버튼 클릭 횟수 세기 -->
+			<p>
+				<button id="localbtn" onclick="clickCounter()" type="button"
+					class="btn btn-light">눌러보세요</button>
+			</p>
+			<div id="result"></div>
+			<p>
+				버튼을 누르면 누른 횟수가 로컬 스토리지에 저장되며,<br>새로고침을 해도 누른 횟수는 저장되어 이어집니다.
+			</p>
+			<p>Close the browser tab (or window), and try again, and the
+				counter will continue to count (is not reset).</p>
+		</div>
+
+
+		<div class="w3-padding-64 w3-content w3-text-grey" id="MINI_GAME2">
+			<h2 class="w3-text-light-grey">Mini Game</h2>
+			<hr class="w3-opacity">
+			<div id="dragdrop">
+				<p>아래 박스 안의 귀여운 캐릭터를 다른 박스로 옮겨 보세요</p>
+				<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+					<img id="du" src="../images/3_TEAM_Hearts1.png" draggable="true"
+						ondragstart="drag(event)">
+				</div>
+				<div>
+					<img id="dire"
+						src="../images/—Pngtree—vector right arrow icon_4267290.png">
+				</div>
+				<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			</div>
+
+		</div>
+
+
+		<div class="w3-padding-64 w3-content w3-text-grey" id="MINI_GAME3">
+			<h2 class="w3-text-light-grey">Mini Game</h2>
+			<hr class="w3-opacity">
+			<p>당신의 현재 위치가 지도 위에 마커로 표시됩니다.</p>
+
+			<!-- 카카오맵 지도에 내 위치 띄우기(서버 돌려야 실행됨) -->
+			<div id="map" style="width: 85%; height: 350px;"></div>
+			<script type="text/javascript"
+				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=09670140fa73f1e7cde3f5725994c985"></script>
+			<script>
+				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				mapOption = {
+					center : new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+					level : 10
+				// 지도의 확대 레벨 
+				};
+
+				var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+				// HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
+				if (navigator.geolocation) {
+
+					// GeoLocation을 이용해서 접속 위치를 얻어옵니다
+					navigator.geolocation
+							.getCurrentPosition(function(position) {
+
+								var lat = position.coords.latitude, // 위도
+								lon = position.coords.longitude; // 경도
+
+								var locPosition = new kakao.maps.LatLng(lat,
+										lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+								message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+
+								// 마커와 인포윈도우를 표시합니다
+								displayMarker(locPosition, message);
+
+							});
+
+				} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
+
+					var locPosition = new kakao.maps.LatLng(33.450701,
+							126.570667), message = 'geolocation을 사용할수 없어요..'
+
+					displayMarker(locPosition, message);
+				}
+
+				// 지도에 마커와 인포윈도우를 표시하는 함수입니다
+				function displayMarker(locPosition, message) {
+
+					// 마커를 생성합니다
+					var marker = new kakao.maps.Marker({
+						map : map,
+						position : locPosition
+					});
+
+					var iwContent = message, // 인포윈도우에 표시할 내용
+					iwRemoveable = true;
+
+					// 인포윈도우를 생성합니다
+					var infowindow = new kakao.maps.InfoWindow({
+						content : iwContent,
+						removable : iwRemoveable
+					});
+
+					// 인포윈도우를 마커위에 표시합니다 
+					infowindow.open(map, marker);
+
+					// 지도 중심좌표를 접속위치로 변경합니다
+					map.setCenter(locPosition);
+				}
+			</script>
+		</div>
+
+		<!-- About Us Section -->
+		<div class="w3-padding-64 w3-content w3-text-grey" id="About_US">
+			<h2 class="w3-text-light-grey">About Us</h2>
+			<hr class="w3-opacity">
+
+			<!-- GitHub 카드 -->
+			<div id="card">
+				<!-- 임준한 카드 -->
+				<div class="card" id="github1" style="width: 16rem;">
+					<img src="../images/junhans.png" class="card-img-top" alt="임준한">
+					<div class="card-body">
+						<h5 class="card-title">임준한 GitHub</h5>
+						<p class="card-text">어쩌고 저쩌고 제 이름은 고윤섭 입니다.</p>
+						<a href="https://github.com/JunHans" class="btn btn-primary"
+							target="_blank">Go JunHans</a>
+					</div>
+				</div>
+
+				<!-- 노현중 카드 -->
+				<div class="card" id="github2" style="width: 16rem;">
+					<img src="../images/hyenjung1.png" class="card-img-top" alt="노현중">
+					<div class="card-body">
+						<h5 class="card-title">노현중 GitHub</h5>
+						<p class="card-text">어쩌고 저쩌고 제 이름은 고윤섭 입니다.</p>
+						<a href="https://github.com/shguswnd" class="btn btn-primary"
+							target="_blank">Go Hyeonjung</a>
+					</div>
+				</div>
+				<!-- 박예빈 카드 -->
+				<div class="card" id="github3" style="width: 16rem;">
+					<img src="../images/3_TEAM_Hearts1.png" class="card-img-top"
+						alt="박예빈">
+					<div class="card-body">
+						<h5 class="card-title">박예빈 GitHub</h5>
+						<p class="card-text">어쩌고 저쩌고 제 이름은 고윤섭 입니다.</p>
+						<a href="#" class="btn btn-primary" target="_blank">Go Yebin</a>
+					</div>
+				</div>
+				<!-- 노다영 카드 -->
+				<div class="card" id="github4" style="width: 16rem;">
+					<img src="../images/dayoung.png" class="card-img-top" alt="노다영">
+					<div class="card-body">
+						<h5 class="card-title">노다영 GitHub</h5>
+						<p class="card-text">어쩌고 저쩌고 제 이름은 고윤섭 입니다.</p>
+						<a href="https://github.com/Darang00" class="btn btn-primary"
+							target="_blank">Go Dayoung</a>
+					</div>
+				</div>
+				<!-- 고윤섭 카드 -->
+				<div class="card" id="github5" style="width: 16rem;">
+					<img src="../images/yunseub.png" class="card-img-top" alt="고윤섭">
+					<div class="card-body">
+						<h5 class="card-title">고윤섭 GitHub</h5>
+						<p class="card-text">어쩌고 저쩌고 제 이름은 고윤섭 입니다.</p>
+						<a href="https://github.com/achieve97" class="btn btn-primary"
+							target="_blank">Go Yunseub</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- Contact Section -->
+	<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+		<h2 class="w3-text-light-grey">Contact Us</h2>
+		<hr class="w3-opacity">
+
+		<div class="w3-section">
+			<p>
+				<i
+					class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+				<a href="http://www.instagram.com/han__daily" target="_blank"
+					class="w3-hover-text-green">Seoul, KR</a>
+			</p>
+			<p>
+				<i
+					class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>
+				<a href="http://www.instagram.com/han__daily" target="_blank"
+					class="w3-hover-text-green">Phone: 01057371887</a>
+			</p>
+			<p>
+				<i
+					class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right">
+				</i> <a href="http://www.instagram.com/han__daily" target="_blank"
+					class="w3-hover-text-green">Email: ii001887@gmail.com</a>
+			</p>
+		</div>
+		<br>
+	</div>
+
+
+	<!-- Footer -->
+	<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+		<i class="fa fa-facebook-official w3-hover-opacity"></i> <i
+			class="fa fa-instagram w3-hover-opacity"></i> <i
+			class="fa fa-snapchat w3-hover-opacity"></i> <i
+			class="fa fa-pinterest-p w3-hover-opacity"></i> <i
+			class="fa fa-twitter w3-hover-opacity"></i> <i
+			class="fa fa-linkedin w3-hover-opacity"></i>
+		<p class="w3-medium">
+			Powered by <a href="http://www.instagram.com/han__daily"
+				target="_blank" class="w3-hover-text-green">JunHans.Corporation®</a>
+		</p>
+		<!-- End footer -->
+	</footer>
+
+	<!-- END PAGE CONTENT -->
+	</div>
+
+</body>
+
+</html>

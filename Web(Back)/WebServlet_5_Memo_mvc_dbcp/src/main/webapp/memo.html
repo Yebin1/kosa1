@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/*
+	비동기 이용하여 (xmlHttpRequest) id 검증하기
+	window.onload 시 button에 onclick 걸기 (addEventListener >> 이벤트리스너는 onclick="이거아님!")
+	입력한 id값으로 server에 비동기 요청
+	
+	요청 주소 http://192.168.0.56:9000/WebServlet_4_Memo_mvc/MemoId?id=입력한id
+			>> 비동기 open함수로 만들기
+	 */
+	let xhr = null;
+
+	// xhr 변수
+	function getInstance() {
+		if (window.XMLHttpRequest) {
+			xhr = new XMLHttpRequest();
+			// 비동기 통신을 위한 객체 생성
+		} else if (window.ActiveXObject) {
+			// 모든 브라우저가 XMLHttpRequest 내장하므로 else if구문이 굳이 필요하지 않음
+		} else {
+			throw new Error("AJAX를 지원하지 않는 브라우저")
+		}
+		return xhr; // xhr이 주소값을 받으므로 주소값 리턴하도록 함
+	}
+
+	// 이벤트 제어
+	function handlerStateChange() {
+		if (xhr.readyState == 4) { // 1. 서버에서 응답이 왔다면 
+			if (xhr.status >= 200 && xhr.status < 300) {
+				// 200 ~ 299 상태 코드: 정상
+				// responseText: 서버가 클라이언트에게 응답한 데이터
+				// 응답 왔을 때 처리하는 코드
+				// 실제로 여기만 바뀜 !
+				console.log(xhr.responseText);
+
+				// 이 아래부터 바꿔서 사용하는 코드
+				// trim으로 아이디에 포함된 공백 문자를 제거
+				let check = xhr.responseText.trim();
+
+				if (check === "false") {
+					alert("사용 불가 ID");
+					document.getElementById("id").value = "";
+				} else {
+					alert("사용 가능 ID");
+				}
+
+			} else {
+				console.log("비정상 처리 : " + xhr.status);
+			}
+		}
+	}
+
+	window.onload = function() {
+		document.getElementById("message").addEventListener("click",
+				function() {
+					let data = document.getElementById("id").value;
+					console.log(data);
+					sendData(data);
+				})
+	}
+
+	function sendData(data) {
+		xhr = getInstance();
+		xhr.onreadystatechange = handlerStateChange;
+		xhr.open("POST", "MemoId?id=" + data); //form 태그 구성
+		xhr.send(); // form submit 버튼 클릭
+	}
+</script>
+</head>
+<body>
+	<div style="margin-top: 70px;"></div>
+	<!--  html 파일  action="MemoServlet"  -->
+	<form name="f" action="MemoServlet" method="get">
+		<div align="center">
+			<table width="600" border="0" cellpadding="7">
+				<tr align="center" bgcolor="gold" height="50">
+					<td colspan="2"><font size="4" color="#0033CC" face="굴림체">
+							<b> Servlet Memo </b>
+					</font></td>
+				</tr>
+				<tr>
+					<td width="25%" align="center"><b>ID</b></td>
+					<td><input type="text" size="40" name="id" maxlength="10"
+						id="id"> <input type="button" value="ID확인" id="message">
+					</td>
+				</tr>
+				<tr>
+					<td width="25%" align="center"><b>EMAIL</b></td>
+					<td><input type="text" size="40" name="email" maxlength="60">
+					</td>
+				</tr>
+				<tr>
+					<td width="25%" align="center"><b>MEMO</b></td>
+					<td><textarea name="content" cols="50" class="box2"></textarea>
+					</td>
+				</tr>
+				<tr bgcolor="gold">
+					<td colspan="2" align="center" class="c2"><input type="submit"
+						value="전송"> <input type="reset" value="취소"></td>
+				</tr>
+
+			</table>
+
+
+		</div>
+	</form>
+	<hr>
+	<a href="MemoList">목록보기</a>
+	<!--  
+ http://localhost:8090/WebServlet_4_Memo_mvc/MemoList
+ -->
+</body>
+</html>

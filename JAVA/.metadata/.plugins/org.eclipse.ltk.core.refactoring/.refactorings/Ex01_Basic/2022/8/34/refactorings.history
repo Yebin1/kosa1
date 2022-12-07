@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;kr.or.kosa.Emp.empno&apos; in &apos;kr.or.kosa.Emp&apos;&#x0D;&#x0A;- Original project: &apos;Ex01_Basic&apos;&#x0D;&#x0A;- Original element: &apos;kr.or.kosa.Emp.empno&apos;&#x0D;&#x0A;- Getter method name: &apos;getEmpno&apos;&#x0D;&#x0A;- Setter method name: &apos;setEmpno&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;empno&apos;" flags="589830" getter="getEmpno" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;kr.or.kosa{Emp.java[Emp^empno" insertion="-1" setter="setEmpno" stamp="1660894676469" version="1.0" visibility="1"/>
+</session>

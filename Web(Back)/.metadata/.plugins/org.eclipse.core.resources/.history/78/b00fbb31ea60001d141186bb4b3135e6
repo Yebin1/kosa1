@@ -1,0 +1,35 @@
+package kr.or.kosa.service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.BoardDao;
+import kr.or.kosa.dto.Board;
+
+public class BoardEditService implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+			
+		String msg = "";
+		String url = "";
+		BoardDao dao;
+		
+		//수정하기
+		String idx = request.getParameter("idx");
+		if(idx == null || idx.trim().equals("")){
+			response.sendRedirect("BoardList.do"); //cpage=1 , ps=5
+			return null;
+		}
+		dao = new BoardDao();
+		Board board = service.board_EditContent(idx);
+		if(board == null){
+			out.print("데이터 오류");
+			out.print("<hr><a href='board_list.jsp'>목록가지</a>");
+			return;
+		}
+	
+	}
+}

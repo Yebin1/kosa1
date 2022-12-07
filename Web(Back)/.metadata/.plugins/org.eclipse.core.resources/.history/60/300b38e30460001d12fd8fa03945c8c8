@@ -1,0 +1,47 @@
+package kr.or.kosa.service;
+
+import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.BoardDao;
+import kr.or.kosa.dto.Board;
+
+public class BoardAddService implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		int idx = Integer.parseInt(request.getParameter("idx"));
+		String writer = request.getParameter("writer");
+		String pwd = request.getParameter("pwd");
+		String subject = request.getParameter("subject");
+		String content = request.getParameter("content");
+		Date writedate = request.getParameter("writedate");
+		int readnum = Integer.parseInt(request.getParameter("readnum"));
+		String filename = request.getParameter("filename");
+		int filesize = Integer.parseInt(request.getParameter("filesize"));
+		String homepage = request.getParameter("homepage");
+		String email = request.getParameter("email");
+		int refer = Integer.parseInt(request.getParameter("refer"));
+		int depth = Integer.parseInt(request.getParameter("depth"));
+		int step = Integer.parseInt(request.getParameter("step"));
+		
+		BoardDao dao = new BoardDao();
+		int result = dao.writeok(new Board(idx, writer, pwd, subject, content, homepage, writedate, readnum, filename, filesize, email, refer, depth, step));
+		
+		int idx, String writer, String pwd, String subject, String content, Date writedate, int readnum,
+		String filename, int filesize, String homepage, String email, int refer, int depth, int step
+		
+		ActionForward forward = new ActionForward();
+		forward.setRedirect(false);
+		forward.setPath("/WEB-INF/views/redirect.jsp");
+		
+		return forward;
+	}
+
+}

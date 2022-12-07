@@ -1,0 +1,61 @@
+package kr.or.kosa.service.admin;
+
+import java.util.HashMap;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.AdminDao;
+import kr.or.kosa.dto.Category;
+
+public class AdminBoardCategory implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+		ActionForward forward = null;
+				
+		try {
+			
+			AdminDao adminDao = new AdminDao();
+			List<Category> categoryList = adminDao.categoryList();
+			
+			System.out.println(categoryList.toString());
+			System.out.println("asdfasdfasdfasdfasdf");
+
+			
+
+			
+			HashMap<String, Integer> count = new HashMap<>();
+			for(Category c : categoryList) {
+				System.out.println("서비스.....: " + c.getBoardname());
+				int cnt = adminDao.totalCountStatus(c.getBoardname());
+				count.put(c.getBoardname(), cnt);
+				System.out.println(cnt);
+			}
+			
+			System.out.println(count);
+			
+			int totalcount = adminDao.totalCount0();
+
+			
+			
+			request.setAttribute("categoryList", categoryList);
+			request.setAttribute("totalcount", totalcount);
+			request.setAttribute("count", count);
+			/*request.setAttribute("status0", status0);
+			request.setAttribute("status1", status1);*/
+			
+			forward = new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("/WEB-INF/views/admin/board_category.jsp");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	return forward;
+	}
+
+}

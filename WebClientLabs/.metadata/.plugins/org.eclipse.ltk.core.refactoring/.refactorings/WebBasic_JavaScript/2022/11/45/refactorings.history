@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Ex40_Script_JSON_API.html&apos; to &apos;webapp&apos;&#x0D;&#x0A;- Original project: &apos;WebBasic_JavaScript&apos;&#x0D;&#x0A;- Destination element: &apos;webapp&apos;&#x0D;&#x0A;- Original element: &apos;Ex40_Script_JSON_API.html&apos;" description="Copy file" element1="src/main/webapp/Ex40_Script_JSON_API.html" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1667371365967" target="/WebBasic_JavaScript_Jquery/src/main/webapp" units="0" version="1.0"/>
+</session>

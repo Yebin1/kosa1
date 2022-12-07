@@ -1,0 +1,17 @@
+127.0.0.1 - - [19/Oct/2022:10:07:04 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:07:04 +0900] "GET /ccc/index.html HTTP/1.1" 200 361
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:07:04 +0900] "GET /ccc/css/bottstrap.css HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:07:04 +0900] "GET /ccc/js/bootstrap.js HTTP/1.1" 200 145677
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:07:05 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:29:30 +0900] "GET /ccc/index.html HTTP/1.1" 200 274251
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:29:30 +0900] "GET /ccc/css/bottstrap.css HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:29:33 +0900] "GET /ccc/css/bottstrap.css HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:29:33 +0900] "GET /ccc/js/bootstrap.js.map HTTP/1.1" 200 309667
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:30:36 +0900] "GET /ccc/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:30:36 +0900] "GET /ccc/css/bottstrap.css HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:10:30:36 +0900] "GET /ccc/js/bootstrap.js.map HTTP/1.1" 200 309667
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:14:04:15 +0900] "GET /ccc/index.html HTTP/1.1" 200 826326
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:14:04:15 +0900] "GET /ccc/css/bottstrap.css HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:14:05:06 +0900] "GET /ccc/css/bottstrap.css HTTP/1.1" 404 836
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:14:05:06 +0900] "GET /ccc/js/bootstrap.js.map HTTP/1.1" 404 838
+0:0:0:0:0:0:0:1 - - [19/Oct/2022:15:22:45 +0900] "GET /WebBasic_JavaScript/Ex41_ETC_Try.html HTTP/1.1" 200 1132

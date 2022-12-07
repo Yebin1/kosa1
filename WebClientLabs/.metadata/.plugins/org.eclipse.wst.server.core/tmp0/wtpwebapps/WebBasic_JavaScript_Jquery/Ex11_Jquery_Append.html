@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        /*
+        append()	Inserts content at the end of selected elements
+        prepend()	Inserts content at the beginning of selected elements
+        after()	Inserts content after sel_ected elements
+        before()	Inserts content before selected elements
+
+        <p>A</p> → B append() → <p>AB</p> → C append() → <p>ABC</p>
+        <p>A</p> → B prepend() → <p>BA</p> → C prepend() → <p>CBA</p>
+        <p>A</p> → B after() → <p>A</p>B
+        <p>A</p> → B before() → B<p>A</p>
+        */
+
+        $(function () {
+            $('#btn1').click(function () {
+                $('p').append("<b>(append text) </b>");
+            });
+
+            $('#btn2').click(function () {
+                $('ol').prepend("<li>(prepend text) </li>");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Prepend text</button>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+package kr.or.kosa.service;
+
+import javax.naming.NamingException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.BoardDao;
+import kr.or.kosa.dto.Board;
+
+public class BoardAddService implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		String writer = request.getParameter("writer");
+		String pwd = request.getParameter("pwd");
+		String subject = request.getParameter("subject");
+		String content = request.getParameter("content");
+		String filename = request.getParameter("filename");
+		String homepage = request.getParameter("homepage");
+		String email = request.getParameter("email");
+
+		int result = 0;
+		
+		Board board = new Board();
+		
+		board.setWriter(writer);
+		board.setPwd(pwd);
+		board.setSubject(subject);
+		board.setContent(content);
+		board.setFilename(filename);
+		board.setHomepage(homepage);
+		board.setEmail(email);
+		
+		try {
+			BoardDao dao = new BoardDao();
+			result = dao.writeok(board);
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+		
+		ActionForward forward = new ActionForward();
+		forward.setRedirect(false);
+		forward.setPath("/WEB-INF/board/redirect.jsp");
+		
+		return forward;
+	}
+
+}

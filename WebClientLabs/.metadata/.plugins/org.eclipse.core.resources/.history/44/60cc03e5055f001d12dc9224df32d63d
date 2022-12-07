@@ -1,0 +1,20 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+Class.forName("oracle.jdbc.OracleDriver");
+Connection conn = null; //Connection 인터페이스 ...
+conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "kosa", "1004");
+
+Statement stmt = conn.createStatement(); //명령 객체 얻어오기
+String sql = "select empno , ename , sal , job ,comm from emp";
+ResultSet rs = stmt.executeQuery(sql); //DB서버에서 실행되고 결과를 생성
+
+// POINT
+
+
+%>

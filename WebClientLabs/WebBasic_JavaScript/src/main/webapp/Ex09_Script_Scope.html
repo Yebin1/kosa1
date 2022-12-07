@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <p>Scope</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+</body>
+<script type="text/javascript">
+    // global variable (모든 함수에서 적용 가능 (페이지 내))
+    var gname = "world";
+    myFunction();
+    function myFunction() {
+        // 함수 내 구현 (local variable)
+        aaa = "아무개"; // 변수 인정
+        console.log("aaa: " + aaa);
+
+        var carname = "volvo"; // local
+        document.getElementById("demo1").innerHTML = typeof (carname) + " " + carname + "<hr>";
+    }
+</script>
+
+</html>

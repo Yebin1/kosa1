@@ -1,0 +1,10 @@
+package kr.or.kosa.dto;
+
+public class Member {
+
+	private String username = "kosa";
+	private String password = "1004";
+	private String address = "서울시 강남구";
+	private String admin = "1";
+
+}

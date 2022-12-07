@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <ul id="mylist">
+        <li>coffee</li>
+        <li>tea</li>
+        <li>milk</li>
+    </ul>
+    <button onclick="myFunc()">클릭</button>
+    <button onclick="myFunc2()">클릭2</button>
+</body>
+<script type="text/javascript">
+    function myFunc() {
+        let list = document.getElementById("mylist");
+        console.log(list);
+        list.removeChild(list.childNodes[0]);
+        // <ul> li .. li .. li 내부적으로 배열
+        // select >> option 내부적으로 배열
+    }
+
+    function myFunc2() {
+        let textnode = document.createTextNode("water");
+        let item = document.getElementById("mylist").childNodes[0];
+        console.log(item);
+        console.log(item.childNodes[0]);
+
+        item.replaceChild(textnode, item.childNodes[0]);
+
+    }
+    // 버튼1로 배열에 넣고 버튼2 눌러야 note에서 0번쨰 값 찾아 replace함
+
+</script>
+
+</html>

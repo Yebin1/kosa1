@@ -1,0 +1,7 @@
+package kr.or.kosa.service.user;
+
+import kr.or.kosa.action.Action;
+
+public class MyReplyListService implements Action {
+
+}

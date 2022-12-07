@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3625666670.index
+3971153402.index
+1885672185.index
+218082235.index
+427935545.index
+1865022853.index
+648297546.index
+1081092576.index
+2950284601.index

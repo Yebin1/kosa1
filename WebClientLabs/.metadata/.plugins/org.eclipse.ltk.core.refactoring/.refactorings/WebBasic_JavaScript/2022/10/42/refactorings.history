@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WebBasic_JavaScript/src/main/webapp/Ex10_Script_DOM.html&apos; to &apos;Ex19_Script_DOM.html&apos;" description="Rename resource &apos;Ex10_Script_DOM.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/Ex10_Script_DOM.html" name="Ex19_Script_DOM.html" stamp="1665708284228" updateReferences="true"/>
+</session>

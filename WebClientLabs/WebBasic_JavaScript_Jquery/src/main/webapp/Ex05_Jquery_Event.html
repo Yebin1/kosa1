@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        /*
+        jquery 이벤트 (on, off): 이벤트 추가, 제거
+        2.x.x 버전 >> bind(), unbind()
+        3.x.x 버전 >> on(), off()
+        */
+
+        $(function () {
+            $('p').on(
+                {
+                    mouseleave:function(){ $(this).css('background-color', 'gold') },
+                    click:function(){ $(this).css('background-color', 'skyblue') },
+                    mouseenter:function(){ $(this).css('background-color', 'yellow') }
+                }
+            );
+
+            // 클릭 이벤트 없애기
+            $('button').click(function() {
+                $('p').off('click');
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <p>on 함수 사용해 다중 이벤트 처리하기</p>
+    <hr>
+    <button>이벤트 제거</button>
+</body>
+
+</html>

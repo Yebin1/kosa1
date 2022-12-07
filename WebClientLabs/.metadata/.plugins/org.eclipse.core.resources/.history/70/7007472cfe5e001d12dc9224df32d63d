@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.wrap-loading {
+			/*로딩 이미지*/
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-left: -21px;
+			margin-top: -21px;
+		}
+
+		.display-none {
+			/*감추기*/
+			display: none;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(function () {
+			$.ajax(
+				{
+					url: "Ex09_board_json",
+					type: "POST", // httpReq.open("POST")
+					// get 방식은 브라우저가 cast함 post는 안함
+					dataType: "json", // 서버가 클라이언트에 응답하는 데이터 형색 (Text: json, html, txt, script)
+					success: function (data) {
+						console.log(data);
+					},
+					error: function (xhr) {
+						console.log(xhr.status);
+					},
+					beforeSend: function () {
+						// beforeSend >> 디테일하게 제어하고 싶을 때 (readyState=3) 
+						//서버에서 데이터가 오는 도중, 다른 것 클릭하지 못하게
+						$('.wrap-loading').removeClass('display-none');
+					},
+					complete: function () {
+						// readyState=4 (서버에서 데이터가 도착) 성공, 실패인지는 모르고 도착하기만 하면 이미지 제거
+						$('.wrap-loading').addClass('display-none');
+					}
+				}
+			)
+		});
+
+	</script>
+
+
+
+
+</head>
+
+<body>
+	<!--  https://loading.io/ -->
+	<div class="wrap-loading display-none">
+		<div>
+			<img src="https://tistory2.daumcdn.net/tistory/1898109/skin/images/Spinner.gif" />
+		</div>
+	</div>
+	<table id="treedata" border="1">
+	</table>
+</body>
+
+</html>
+​

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// javascript 해석 >> 웹 브라우저 (해석 + 내장 객체 제공)
+	// 내장 객체 자원들 >> window 객체
+	window.document.write("방가방가 <br>");
+
+	// window 객체 생략
+	document.write("window 객체는 생략 가능 <br>");
+
+	console.log("디버깅, 결과 미리보기, 오류 메시지 확인");
+	console.log(10 + 10);
+
+	document.write("<b>hello world</b>");
+	document.write('<table border="1">');
+	document.write('<tr><td>aa</td><td>bb</td></tr>');
+	document.write('</table');
+
+	// var, let, const
+	var num; // 타입 정해지지 않음 (정수, 문자, 날짜)
+	console.log(num); // undefined
+	num = 10; // 값을 가지는 순간 내부적으로 타입 결정
+	console.log("num: " + num); // 10
+
+	let num2 = 100;
+	console.log(num2); // 100
+	console.log(typeof (num2)); // number
+
+	// javascript 순서대로 실행
+	/* let element = window.document.forms[0].elements[0];
+	console.log(element); */
+	// Uncaught TypeError: Cannot read properties of undefined (reading 'elements')
+	
+	function data() {
+		let element = window.document.forms[0].elements[0];
+		alert(element);
+	}
+	
+	
+</script>
+</head>
+<body>
+	<form action="#" method="get" name="myform">
+		<input type="text" name="userid" value="hong"><br>
+		<input type="password" name="pwd" value="1004"><br>
+		<input type="submit" value="전송">
+
+	</form>
+	
+	<input type="button" value="클릭해봐" onclick="data()">
+<script type="text/javascript">
+	let element = window.document.forms[0].elements[0];
+	console.log(element); // hong
+	console.log(element.value);
+	console.log(element.value.length);
+	
+	let value = window.document.myform.userid.value;
+	console.log("타입: " + typeof(value)); //string
+	
+	if(value.length<5){
+		alert("다시 입력해");
+		//element
+	}
+</script>
+
+</body>
+</html>

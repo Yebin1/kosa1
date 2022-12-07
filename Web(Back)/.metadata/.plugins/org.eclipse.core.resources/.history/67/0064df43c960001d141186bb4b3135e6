@@ -1,0 +1,26 @@
+package kr.or.kosa.service;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+
+public class BoardContentService implements Action {
+	
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+		
+		
+		
+		request.setAttribute("board_msg", msg);
+		request.setAttribute("board_url", url);
+		
+		ActionForward forward = new ActionForward();
+		forward.setRedirect(false);
+		forward.setPath("/WEB-INF/board/redirect.jsp");
+		
+		return forward;
+		
+	}	
+}

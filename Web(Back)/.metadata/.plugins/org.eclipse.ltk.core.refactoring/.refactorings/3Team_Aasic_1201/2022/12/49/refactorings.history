@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;3Team_Aasic_1201/src/main/webapp/chart___&apos; to &apos;chart&apos;" description="Rename resource &apos;chart___&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/chart___" name="chart" stamp="1669853639622" updateReferences="true"/>
+</session>

@@ -1,0 +1,22 @@
+INDEX VERSION 1.131+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jdt.core
+3625666670.index
+4215179703.index
+1865022853.index
+1623808287.index
+1865797976.index
+2950284601.index
+1885672185.index
+427935545.index
+90784213.index
+215601334.index
+3971153402.index
+2514195477.index
+4001832018.index
+1081092576.index
+218082235.index
+660640199.index
+1654891641.index
+3159928370.index
+271155803.index
+2038895410.index
+648297546.index

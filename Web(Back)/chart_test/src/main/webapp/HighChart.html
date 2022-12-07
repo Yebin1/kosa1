@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="HighChart.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+	$(function() {
+		$('#btn').click(function() {
+							//비동기 처리
+							$.ajax({
+										url : "http://localhost:8090/high_Chart_Emp/HighChart.jsp",
+										//url : "http://127.0.0.1:8090/WebBasic_JavaScript_Jquery_Ajax/Ex12_jsonlib_Server.jsp",
+										type : "GET",
+										dataType : "JSON", //POINT
+										success : function(data) {
+											console.log(data);
+											//가공 (개발자 마음)
+											$.each(data, function(index, obj) {
+												$('#list').append(
+														"<tr><td>" + index
+																+ "</td><td>"
+																+ obj.job
+																+ "</td><td>"
+																+ obj.sal
+																+ "</td></tr>");
+											});
+										},
+										error : function(xhr) {
+											alert(xhr.status + "ERROR");
+										}
+
+									});
+						});
+
+        // 차드가 들어갈 Div id 입력
+Highcharts.chart('container', {
+	/* 차트 정의 */
+	chart: {
+		type: 'column'
+	},
+	/* 차트 타이틀 */
+	title: {
+		text: 'EMP T 직종별 급여평균'
+	},
+	/* 차트 서브타이틀, 링크 이동 가능 */
+	subtitle: {
+		text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">EMP Table</a>'
+	},
+	/* Y축 컬럼 */
+	yAxis: {
+		min: 0, // 최소값
+		title: {
+			text: '급여평균 (millions)' // Y축 타이틀
+		}
+	},
+	/* X축 컬럼 */
+	xAxis: {
+		type: 'category',
+		labels: {
+			rotation: -45, // 라벨 기울기
+			style: {
+				fontSize: '13px', // X축 폰트 사이즈
+				fontFamily: 'Verdana, sans-serif' // X축 폰트
+			}
+		}
+	},
+	/* 범례 사용 X */
+	legend: {
+		enabled: false
+	},
+	/* 데이터에 마우스 오버시 나타나는 상세 출력 형식 */
+	tooltip: {
+		pointFormat: '급여 평균: <b>{point.y:.1f} millions</b>'
+	},
+
+	/* 차트 데이터 */
+	series: [{
+		name: 'Population',
+		/* [[x축컬럼 1, 데이터1], [x축컬럼 2, 데이터2], ... ]*/
+		data: data
+	}],
+		/* 차트(막대) 안의 데이터 값 표현 방식*/
+		dataLabels: {
+			enabled: true, // 차트(막대) 안의 데이터 표기 여부 (true : 표기, false : 미표기)
+			rotation: -90, // 차트(막대) 안의 데이터 텍스트 각도
+			color: 'BLACK', // 차트(막대) 안의 데이터 텍스트 색상
+			align: 'right', // 정렬
+			//format: '{point.y:.1f}', // one decimal
+			y: 10, // 10 pixels down from the top
+			style: {
+				fontSize: '7px',
+				fontFamily: 'Verdana, sans-serif'
+			}
+		}
+	}
+});
+	
+
+	});
+</script>
+<body>
+
+	<figure class="highcharts-figure">
+		<div id="container"></div>
+		<p id="ex" class="highcharts-description">
+			<b>EMP 테이블 직종별 급여 평균 데이터</b>
+		</p>
+	</figure>
+
+	<button id="btn">아아</button>
+	
+	<table id="list" border="1">
+
+	</table>
+
+	<!-- Highchart의 기본적인 기능 담고있는 스크립트(필수) -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<!-- 데이터에 라벨을 붙이기 위한 스크립트 (라벨링 필수) -->
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<!-- 만든 그래프를 JPG , PNG 등 이미지로 다운로드 가능케 해주는 스크립트 -->
+	<script src=" https://code.highcharts.com/modules/exporting.js"></script>
+	<!-- 그래프를 생성할 때 사용한 데이터파일을 CSV 등 확장자로 다운로드할 수 있게 하는 스크립트
+    외부 사용자가 데이터 다우로드 할 수 있게 하는 경우에만 사용 -->
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<!-- 커스텀 스트립트 -->
+	<script src="./HighChart.js"></script>
+</head>
+</body>
+</html>

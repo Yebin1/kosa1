@@ -1,0 +1,73 @@
+package kr.or.kosa.service.user;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import kr.or.kosa.action.Action;
+import kr.or.kosa.action.ActionForward;
+import kr.or.kosa.dao.MemberDao;
+import kr.or.kosa.dto.Board;
+import kr.or.kosa.dto.Reply;
+
+public class MyReplyListService implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) {
+		ActionForward forward = null;
+
+		try {
+
+			MemberDao memberDao = new MemberDao();
+			HttpSession session = request.getSession();
+			String userid = (String) session.getAttribute("userid");
+
+			int totalreplycount = memberDao.myReplyCount(userid);
+			String ps = request.getParameter("ps");
+			String cp = request.getParameter("cp");
+
+			if (ps == null || ps.trim().equals("")) {
+				ps = "5";
+			}
+			if (cp == null || cp.trim().equals("")) {
+				cp = "1";
+			}
+			int pagesize = Integer.parseInt(ps);
+			int cpage = Integer.parseInt(cp);
+			int pagecount = 0;
+
+			if (totalreplycount % pagesize == 0) {
+				pagecount = totalreplycount / pagesize;
+			} else {
+				pagecount = (totalreplycount / pagesize) + 1;
+			}
+
+			List<Board> board = memberDao.myReplyListBoard(cpage, pagesize, userid);
+			List<Reply> reply = memberDao.myReplyList(cpage, pagesize, userid);
+
+			int pagersize = 3;
+
+			request.setAttribute("pagesize", pagesize);
+			request.setAttribute("cpage", cpage);
+			request.setAttribute("pagecount", pagecount);
+			request.setAttribute("reply", reply);
+			request.setAttribute("board", board);
+			request.setAttribute("totalreplycount", totalreplycount);
+
+			forward = new ActionForward();
+			forward.setRedirect(false); 
+			forward.setPath("/WEB-INF/views/web/myreply_list.jsp");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return forward;
+
+	}
+
+}

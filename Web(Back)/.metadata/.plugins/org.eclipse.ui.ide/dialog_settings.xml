@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\12-01일의 최종본"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Aasic_1128-6(11-29 전원통합)\3Team_Aasic_1128-6"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Aasic_1128(준한)"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Aasic_YUNSEOB"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Aasic_1128-2\3Team_Aasic_1128-2"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Aasic_1128-1(통합)\3Team_Aasic_1128-1"/>
+			<item value="C:\Users\KOSA\Desktop\3gittt\3Team_Git"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Aasic_1124"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\221124_3Team_Project_3조시작_GIT\TEST_GIT_221124"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\극락조_프로젝트_찐시작\3Team_Project_221120"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Project_찐찐시작\3Team_Project_221120"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Project_찐시작\3Team_Project_221120"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Basic_1118\3Team_Basic_1117"/>
+			<item value="C:\Users\KOSA\Desktop\3조프로젝트\3Team_Basic"/>
+			<item value="C:\Users\KOSA\Desktop\WebServlet_92_Board_Model2_Mvc-20221110T073044Z-001\WebServlet_92_Board_Model2_Mvc"/>
+			<item value="C:\Users\KOSA\Desktop\WebServlet_92_Board_Model1"/>
+			<item value="C:\Users\KOSA\Desktop\WebServlet_9_Member_Model2_Mvc_Url_Interface"/>
+			<item value="C:\Users\KOSA\Desktop\include_3_2"/>
+			<item value="C:\Users\KOSA\Desktop\WebJSP_JDBC_HomeWork"/>
+			<item value="C:\Users\KOSA\Desktop\006895-master\pro13"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="991"/>
+			<item key="DIALOG_Y_ORIGIN" value="448"/>
+			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		</section>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\KOSA_IT\Web(Back)\Labs\WebServlet_9_Member_Model2_Mvc_Url_Interface"/>
+			<item value="C:\Users\KOSA\Desktop\WebJSP_JDBC_HomeWork2\WebContent"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,613 @@
+package kr.or.kosa.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import org.apache.el.parser.BooleanNode;
+
+import kr.or.kosa.dto.Board;
+import kr.or.kosa.dto.Category;
+import kr.or.kosa.dto.Member;
+import kr.or.kosa.dto.MemberDetail;
+import java.lang.StringBuffer;
+
+public class CommonDao {
+
+	DataSource ds = null;
+	private Connection conn;
+	private PreparedStatement pstmt1;
+	private PreparedStatement pstmt2;
+	private PreparedStatement pstmt3;
+	private ResultSet rs1;
+	private String sql1;
+	private String sql2;
+	private String sql3;
+	private int resultRow;
+	private boolean idCheck; // 아이디 체크여부
+	private boolean idCheck2; // 아이디 체크여부
+	private Member member;
+	private Board board;
+	private Category category;
+	private MemberDetail memberDetail;
+	private List<Member> memberList;
+	private List<MemberDetail> memberDetailList;
+	private List<Board> hotList;
+	private List<Board> noticeList;
+	private List<Category> categoryList;
+	private String pwdCheck;
+	private int stausCheck;
+	private static CommonDao instance;
+	private StringBuffer sql4;
+	private int totalCount;
+
+	public CommonDao() throws NamingException {
+		Context context = new InitialContext();
+		ds = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
+		conn = null;
+		pstmt1 = null;
+		pstmt2 = null;
+		rs1 = null;
+		resultRow = 0;
+		idCheck = false;
+		sql1 = "";
+		sql2 = "";
+	}
+
+	// 카테고리 출력 (추후에 동적 게시판 만들때 참고)
+	public List<Category> getAllCategory() {
+		try {
+			conn = ds.getConnection();
+			categoryList = new ArrayList<Category>();
+			sql1 = "select * from category";
+			pstmt1 = conn.prepareStatement(sql1);
+			rs1 = pstmt1.executeQuery();
+
+			while (rs1.next()) {
+				category = new Category();
+				category.setBoardname(rs1.getString("boardname"));
+				categoryList.add(category);
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return categoryList;
+	}
+
+	// 정지된 계정 판단
+	public boolean idStatus(String userid) {
+		try {
+			conn = ds.getConnection();
+			sql1 = "select status from member where userid=?";
+			pstmt1 = conn.prepareStatement(sql1);
+			pstmt1.setString(1, userid);
+			rs1 = pstmt1.executeQuery();
+			member = new Member();
+			if (rs1.next()) {
+				member.setStatus(rs1.getInt("status"));
+				stausCheck = member.getStatus();
+				if (stausCheck == 0) {
+					idCheck = false; // 계정 정지
+				} else {
+					idCheck = true; // 계정 사용
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e2) {
+
+			}
+		}
+		return idCheck;
+	}
+
+	// 로그인할 때 아이디 체크
+	public Boolean idCheck(String userid, String pwd) {
+		try {
+
+			conn = ds.getConnection();
+			sql1 = "select * from memberdetail where userid=?";
+			pstmt1 = conn.prepareStatement(sql1);
+			pstmt1.setString(1, userid);
+			rs1 = pstmt1.executeQuery();
+			System.out.println("rs1 : " + rs1);
+
+			if (rs1.next()) {
+				pwdCheck = rs1.getString("pwd");
+				if (pwdCheck.equals(pwd)) {
+					idCheck = true; // 아이디, 비밀번호 일치
+				} else {
+					idCheck = false; // 비밀번호 불일치
+					System.out.println("불일치 여기 타나?");
+				}
+			} else {
+
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e2) {
+
+			}
+		}
+		return idCheck;
+	}
+
+	// 회원가입
+	public int writeOk(Member member, MemberDetail memberDetail) {
+		try {
+			conn = ds.getConnection();
+
+			conn.setAutoCommit(false);
+
+			sql1 = "insert into memberdetail(userid,pwd,name,email,phone,address,gender,joindate,profilephoto) "
+					+ "values(?,?,?,?,?,?,?,sysdate,0)";
+
+			pstmt1 = conn.prepareStatement(sql1);
+			pstmt1.setString(1, memberDetail.getUserid());
+			pstmt1.setString(2, memberDetail.getPwd());
+			pstmt1.setString(3, memberDetail.getName());
+			pstmt1.setString(4, memberDetail.getEmail());
+			pstmt1.setString(5, memberDetail.getPhone());
+			pstmt1.setString(6, memberDetail.getAddress());
+			pstmt1.setString(7, memberDetail.getGender());
+			pstmt1.executeUpdate();
+
+			sql2 = "insert into member(userid, status, ip) values(?,1,?)";
+			pstmt2 = conn.prepareStatement(sql2);
+			pstmt2.setString(1, member.getUserid());
+			pstmt2.setString(2, member.getIp());
+			resultRow = pstmt2.executeUpdate();
+
+			sql3 = "insert into usergrade(userid, gradename, totallovecount) values(?, 'bronze', 0)";
+			pstmt3 = conn.prepareStatement(sql3);
+			pstmt3.setString(1, member.getUserid());
+			resultRow = pstmt3.executeUpdate();
+
+			conn.commit();
+			conn.setAutoCommit(true);
+
+		} catch (SQLException e) {
+			try {
+				conn.rollback();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+
+		} finally {
+			try {
+				pstmt1.close();
+				pstmt2.close();
+				conn.close();
+			} catch (Exception e2) {
+
+			}
+
+		}
+		return resultRow;
+	}
+
+	// 게시글 삭제하기
+	public int deleteOk(String idx, String userid) {
+		try {
+			conn = ds.getConnection();
+			System.out.println("DAOidx 1: " + idx);
+			System.out.println("DAOuserid 1: " + userid);
+
+			String sql_userid = "select userid from board where idx=?"; // 비번검증
+			String sql_board = "update board set boardstatus=0 where idx=?"; // 게시글 삭제
+			pstmt1 = conn.prepareStatement(sql_userid);
+			pstmt1.setString(1, idx);
+			rs1 = pstmt1.executeQuery();
+
+			if (rs1.next()) { // 삭제글은 존재
+				// 사용자의 userid, DB의 userid
+				if (userid.equals(rs1.getString("userid"))) { // userid가 맞다면
+					// 스테이터스 값 1로 바꾸기 처리
+					// 게시글 상태값 바꾸기 (원본글 , 답글)
+					pstmt1 = conn.prepareStatement(sql_board);
+					pstmt1.setString(1, idx);
+					resultRow = pstmt1.executeUpdate();
+					if (resultRow > 0) {
+						conn.commit(); // 두개의 delete 실반영
+					}
+				} else { // 비밀번호가 일치 하지 않는 경우
+					resultRow = -1;
+				}
+			} else { // 삭제하는 글이 존재하지 않는 경우
+				resultRow = 0;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return resultRow;
+	}
+
+	// 회원 삭제 or 탈퇴(=상태값 변환)
+	public int userDelete(String userid) {
+		try {
+			conn = ds.getConnection();
+			System.out.println("userid11 : " + userid);
+			sql1 = "update member set status=0 where userid = ?";
+			System.out.println(sql1);
+			pstmt1 = conn.prepareStatement(sql1);
+			pstmt1.setString(1, userid);
+
+			resultRow = pstmt1.executeUpdate();
+			System.out.println(resultRow);
+			System.out.println("userid22 : " + userid);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt1.close();
+				pstmt2.close();
+				conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+
+		}
+		return resultRow;
+	}
+
+	// 핫게시판~~~
+	public List<Board> hotBoardList() {
+
+		System.out.println("핫게쿼리문DAO시작");
+
+		try {
+			conn = ds.getConnection();
+			sql1 = "select boardname, title, idx,userid, lovenum from "
+					+ "(select boardname, title,idx,userid,lovenum from board order by lovenum desc) where rownum <= 4";
+			pstmt1 = conn.prepareStatement(sql1);
+
+			System.out.println("핫게쿼리문DAO: " + sql1);
+
+			rs1 = pstmt1.executeQuery();
+			hotList = new ArrayList<Board>();
+
+			System.out.println("executeQuery까지 완료");
+
+			while (rs1.next()) {
+				board = new Board();
+				board.setBoardname(rs1.getString("boardname"));
+				board.setTitle(rs1.getString("title"));
+				board.setIdx(rs1.getInt("idx"));
+				board.setUserid(rs1.getString("userid"));
+				board.setLovenum(rs1.getInt("lovenum"));
+				hotList.add(board);
+			}
+			System.out.println("hotList : " + hotList.toString());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e2) {
+			}
+		}
+		return hotList;
+	}
+
+	// 메인화면 공지게시판~~~
+	public List<Board> noticeBoardList() {
+
+		System.out.println("공게쿼리문DAO시작");
+
+		try {
+			conn = ds.getConnection();
+			sql1 = "select boardname, title, idx,userid, lovenum from "
+					+ "(select boardname, title,idx,userid,lovenum from board order by lovenum desc) where rownum <= 4 and boardname='공지사항'";
+			pstmt1 = conn.prepareStatement(sql1);
+
+			System.out.println("공게쿼리문DAO: " + sql1);
+
+			rs1 = pstmt1.executeQuery();
+			noticeList = new ArrayList<Board>();
+
+			System.out.println("executeQuery까지 완료");
+
+			while (rs1.next()) {
+				board = new Board();
+				board.setBoardname(rs1.getString("boardname"));
+				board.setTitle(rs1.getString("title"));
+				board.setIdx(rs1.getInt("idx"));
+				board.setUserid(rs1.getString("userid"));
+				board.setLovenum(rs1.getInt("lovenum"));
+				noticeList.add(board);
+			}
+			System.out.println("noticeList : " + noticeList.toString());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e2) {
+			}
+		}
+		return noticeList;
+	}
+
+	public static CommonDao getInstance() {
+		if (instance == null)
+			try {
+				instance = new CommonDao();
+			} catch (NamingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		return instance;
+	}
+
+	public void setTotalCount() throws SQLException {
+
+		try {
+
+			// 쿼리생성
+			// 총 방문자수를 증가시키기 위해 테이블에 현재 날짜 값을 추가시킨다.
+			StringBuffer sql = new StringBuffer();
+			sql.append("INSERT INTO VISIT (V_DATE) VALUES (sysdate)");
+
+			// 커넥션을 가져온다.
+			conn = ds.getConnection();
+
+			// 자동 커밋을 false로 한다.
+			conn.setAutoCommit(false);
+
+			pstmt1 = conn.prepareStatement(sql.toString());
+			// 쿼리 실행
+			pstmt1.executeUpdate();
+			// 완료시 커밋
+			conn.commit();
+
+		} catch (SQLException sqle) {
+			// 오류시 롤백
+			conn.rollback();
+			throw new RuntimeException(sqle.getMessage());
+		} finally {
+			// Connection, PreparedStatement를 닫는다.
+			try {
+				if (pstmt1 != null) {
+					pstmt1.close();
+					pstmt1 = null;
+				}
+				if (conn != null) {
+					conn.close();
+					conn = null;
+				}
+			} catch (Exception e) {
+				throw new RuntimeException(e.getMessage());
+			}
+		}
+	} // end setTotalCount()
+
+	public int getTotalCount() {
+
+		int totalCount = 0;
+
+		try {
+
+			// 테이블의 테이터 수를 가져온다.
+			// 데이터 수 = 총 방문자 수
+			StringBuffer sql = new StringBuffer();
+			sql.append("SELECT COUNT(*) AS TotalCnt FROM VISIT");
+
+			conn = ds.getConnection();
+			pstmt1 = conn.prepareStatement(sql.toString());
+			rs1 = pstmt1.executeQuery();
+
+			// 방문자 수를 변수에 담는다.
+			if (rs1.next())
+				totalCount = rs1.getInt("TotalCnt");
+
+			return totalCount;
+
+		} catch (Exception sqle) {
+			throw new RuntimeException(sqle.getMessage());
+		} finally {
+			// Connection, PreparedStatement를 닫는다.
+			try {
+				if (pstmt1 != null) {
+					pstmt1.close();
+					pstmt1 = null;
+				}
+				if (conn != null) {
+					conn.close();
+					conn = null;
+				}
+			} catch (Exception e) {
+				throw new RuntimeException(e.getMessage());
+			}
+		}
+	} // end getTotalCount()
+
+	/**
+	 * 오늘 방문자 수를 가져온다.
+	 * 
+	 * @return todayCount : 오늘 방문자
+	 */
+	public int getTodayCount() {
+		Connection conn = null;
+		PreparedStatement pstmt1 = null;
+
+		int todayCount = 0;
+
+		try {
+
+			StringBuffer sql = new StringBuffer();
+			sql.append("SELECT COUNT(*) AS TodayCnt FROM VISIT");
+			sql.append(" WHERE TO_DATE(V_DATE, 'YYYY-MM-DD') = TO_DATE(sysdate, 'YYYY-MM-DD')");
+
+			conn = ds.getConnection();
+			pstmt1 = conn.prepareStatement(sql.toString());
+			rs1 = pstmt1.executeQuery();
+
+			// 방문자 수를 변수에 담는다.
+			if (rs1.next())
+				todayCount = rs1.getInt("TodayCnt");
+
+			return todayCount;
+
+		} catch (Exception sqle) {
+			throw new RuntimeException(sqle.getMessage());
+		} finally {
+			// Connection, PreparedStatement를 닫는다.
+			try {
+				if (pstmt1 != null) {
+					pstmt1.close();
+					pstmt1 = null;
+				}
+				if (conn != null) {
+					conn.close();
+					conn = null;
+				}
+			} catch (Exception e) {
+				throw new RuntimeException(e.getMessage());
+			}
+		}
+	}// end getTodayCount()
+
+	// 검색어 조회 시 총 검색된 게시글 수
+	public int totalSearchCount(String searchWord) {
+		sql4 = new StringBuffer();
+
+		try {
+			conn = ds.getConnection();
+			sql4.append("SELECT count(*) cnt FROM board WHERE boardstatus = 1 ");
+			sql4.append("AND (title LIKE ? OR content LIKE ?) ");
+			pstmt1 = conn.prepareStatement(sql4.toString());
+			System.out.println("searchWord: " + searchWord);
+			pstmt1.setString(1, "%" + searchWord + "%");
+			pstmt1.setString(2, "%" + searchWord + "%");
+			System.out.println("totalSearchCount sql4: " + sql4);
+
+			rs1 = pstmt1.executeQuery();
+			if (rs1.next()) {
+				totalCount = rs1.getInt("cnt");
+			}
+
+		} catch (Exception e13) {
+			System.out.println("e13: " + e13);
+			e13.printStackTrace();
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e14) {
+				System.out.println("e14: " + e14);
+				e14.printStackTrace();
+			}
+		}
+
+		System.out.println(totalCount);
+		return totalCount;
+	}
+
+	// 검색어로 게시글 조회
+	public List<Board> getBoardSearch(int cpage, int pagesize, String searchWord) {
+
+		List<Board> boardsList = new ArrayList<Board>(); // return 값을 boardsList
+		sql4 = new StringBuffer();
+
+		try {
+			conn = ds.getConnection();
+
+			sql4.append("select * from (select rownum rnum, b.* from "
+					+ "(select idx, userid, boardname, title, writedate, boardstatus from board "
+					+ "where (board.title LIKE ? OR board.content LIKE ?) "
+					+ "and boardstatus =1 order by idx desc) b) " + "where rnum >=? and rnum <=?");
+
+			/*
+			 * sql4.append("SELECT idx, userid, boardname, title, writedate ");
+			 * sql4.append("FROM board ");
+			 * sql4.append("WHERE boardstatus=1 AND (title LIKE ? OR content LIKE ?) ");
+			 * sql4.append("ORDER BY idx desc");
+			 */
+
+			System.out.println("getBoardSearch sql4: " + sql4);
+
+			pstmt1 = conn.prepareStatement(sql4.toString());
+			pstmt1.setString(1, "%" + searchWord + "%");
+			pstmt1.setString(2, "%" + searchWord + "%");
+			pstmt1.setInt(3, start);
+			
+
+			System.out.println("pstmt1: " + pstmt1);
+
+			rs1 = pstmt1.executeQuery(); // SELECT 할때 쓰는 함수
+			System.out.println("rs1: " + rs1.toString());
+
+			while (rs1.next()) {
+				System.out.println("while문 들어왔다");
+
+				Board board = new Board(); // 배열에 하나씩 들어갈 아이
+				board.setIdx(rs1.getInt("idx"));
+				board.setUserid(rs1.getString("userid")); // writerid
+				board.setBoardname(rs1.getString("boardname"));
+				board.setTitle(rs1.getString("title"));
+				/*
+				 * board.setContent(rs1.getString("content"));
+				 * System.out.println(rs1.getString("content"));
+				 */
+				board.setWritedate(rs1.getDate("writedate"));
+				System.out.println(rs1.getString("writedate"));
+				boardsList.add(board);
+			}
+
+		} catch (Exception e15) {
+			System.out.println("e15: " + e15);
+			e15.printStackTrace();
+		} finally {
+			try {
+				pstmt1.close();
+				rs1.close();
+				conn.close();
+			} catch (Exception e16) {
+				e16.printStackTrace();
+			}
+		}
+
+		return boardsList;
+	}
+}

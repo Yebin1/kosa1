@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            let myphotos = ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg"];
+
+            // a click 이벤트 처리
+            // [0][1][2][3] 
+            // 다음 버튼 클릭시 다음 이미지
+
+            let index = 0;
+            console.log("index: " + index);
+
+            document.getElementById("prv").addEventListener("click", function () {
+                if (index == 0) {
+                    index = myphotos.length;
+                }
+                document.getElementById("imgs").src = myphotos[--index];
+
+            });
+
+            document.getElementById("next").addEventListener("click", function () {
+                if (++index == myphotos.length) {
+                    index = 0;
+                }
+                document.getElementById("imgs").src = myphotos[index];
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>DOM 슬라이드</h3>
+    <img src="images/1.jpg" alt="이미지" id="imgs" width="200" height="200">
+    <hr>
+    <a href="#" id="prv">이전</a>||<a href="#" id="next">다음</a>
+</body>
+
+</html>

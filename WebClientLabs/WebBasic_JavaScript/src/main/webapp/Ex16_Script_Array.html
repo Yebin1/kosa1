@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        // while
+        let i = 1;
+        let sum = 0;
+        while (i <= 10) {
+            // 명시적인 증가감 필요
+            sum += i;
+            i++;
+        }
+        console.log("sum: " + sum); // 55
+        console.log("i: " + i); // 11
+
+        // for
+        let sum2 = 0;
+        for (let j = 0; j <= 10; j++) {
+            if (j % 3 === 0) {
+                console.log("j: " + j);
+                continue;
+            }
+            console.log("for j: " + j);
+            sum2 += j;
+        }
+
+        /////////////////////////////////////////////
+
+        // Array
+        /*
+         JAVA: 정적 배열(Array) >> 배열 방 크기 고정 : 동적 배열 (Collection) >> 다양한 class
+         int[] arr = new int[3];
+         int[] arr = new int[]{1, 2, 3};
+         int[] arr = {11, 22, 33} // key point
+
+         List<String> li = new ArrayList<String>();
+         li.add("A");
+         li.add("B");
+
+         Javascript >> 정적 + 동적 >> 동적 Array
+         선언 방법: let arr = [];
+         arr.push();
+         arr.pop();
+        */
+
+        let arr = [10, 20, 30];
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br>");
+        }
+
+        let eng = new Array(3); // bad code
+        for (let i = 0; i < eng.length; i++) {
+            document.write(eng[i] + "<br>");
+        } // undefined (각각의 방이 값의 정보를 가지고 있지 않음)
+        eng[0] = 100;
+        eng[1] = 200;
+        eng[2] = 300;
+        for (let i = 0; i < eng.length; i++) {
+            document.write(eng[i] + "<br>");
+        } // 초기화 후에 100, 200, 300 출력
+
+        // good (BEST)
+        // Javascript Array >> 자료구조 >> stack(LIFO)
+        let arr2 = [];
+        arr2.push(10);
+        arr2.push(20);
+        document.write(arr2.pop()); // 20
+        document.write(arr2.pop()); // 10
+
+        // 1. 배열 기본 생성 방법
+        // BAD
+        let array = new Array(5);
+        let array2 = new Array(10, 20, 30);
+
+        // GOOD
+        let array3 = [1, 2, 3];
+        let array4 = [];
+        array4.push(10);
+        array4.push(11);
+        document.write(array4.pop()); // 11
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

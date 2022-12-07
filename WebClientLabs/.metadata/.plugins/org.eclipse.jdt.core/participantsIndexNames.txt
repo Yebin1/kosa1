@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1194646864.index
+\WebBasic_JavaScript_Jquery\src\main\java
+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2669460043.index
+\WebBasic_JavaScript_Jquery_Ajax\src\main\java
+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2522030054.index
+\WebBasic\src\main\java
+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1292221536.index
+\WebBasic_JavaScript_ajax\src\main\java
+C:\KOSA_IT\Web\WebClientLabs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1496069894.index
+\WebBasic_JavaScript\src\main\java

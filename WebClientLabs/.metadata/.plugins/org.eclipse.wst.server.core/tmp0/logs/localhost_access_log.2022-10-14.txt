@@ -1,0 +1,11 @@
+127.0.0.1 - - [14/Oct/2022:10:26:50 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:26:51 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 200 948
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:26:51 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:30:51 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:30:54 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:31:04 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 200 948
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:32:03 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 200 948
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:10:40:26 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 200 948
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:11:20:25 +0900] "GET /WebBasic_JavaScript/Ex22_Script_DOM_Event.html HTTP/1.1" 200 984
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:11:21:38 +0900] "GET /WebBasic_JavaScript/Ex19_Script_DOM.html HTTP/1.1" 200 948
+0:0:0:0:0:0:0:1 - - [14/Oct/2022:13:16:01 +0900] "GET /WebBasic_JavaScript/Ex23_Script_DOM_Event.html HTTP/1.1" 200 1337

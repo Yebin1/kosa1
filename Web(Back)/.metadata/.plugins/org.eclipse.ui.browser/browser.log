@@ -1,0 +1,255 @@
+
+10월 26, 2022 17:44:49.261 NEW SESSION
+10월 26, 2022 17:44:49.261 [7668:14004:1026/174449.247:ERROR:device_event_log_impl.cc(214)] [17:44:49.247] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 26, 2022 17:44:49.262 [7668:14004:1026/174449.247:ERROR:device_event_log_impl.cc(214)] [17:44:49.248] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 26, 2022 17:45:45.335 [7668:13088:1026/174545.333:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+10월 26, 2022 18:22:54.496 [21480:24468:1026/182254.494:ERROR:device_event_log_impl.cc(214)] [18:22:54.495] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 26, 2022 18:22:54.497 [21480:24468:1026/182254.495:ERROR:device_event_log_impl.cc(214)] [18:22:54.495] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 26, 2022 18:23:51.866 [21480:11160:1026/182351.864:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+10월 28, 2022 08:31:24.488 NEW SESSION
+10월 28, 2022 08:31:24.488 [16524:5080:1028/083124.485:ERROR:device_event_log_impl.cc(214)] [08:31:24.485] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 28, 2022 08:31:24.490 [16524:5080:1028/083124.485:ERROR:device_event_log_impl.cc(214)] [08:31:24.485] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 28, 2022 08:32:19.719 [16524:17316:1028/083219.717:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+10월 31, 2022 18:48:31.807 NEW SESSION
+10월 31, 2022 18:48:31.807 [20892:31064:1031/184831.804:ERROR:device_event_log_impl.cc(214)] [18:48:31.804] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 31, 2022 18:48:31.809 [20892:31064:1031/184831.804:ERROR:device_event_log_impl.cc(214)] [18:48:31.805] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+10월 31, 2022 18:49:28.305 [20892:40152:1031/184928.303:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 01, 2022 09:22:57.508 NEW SESSION
+11월 01, 2022 09:22:57.509 [18956:10836:1101/092257.499:ERROR:device_event_log_impl.cc(214)] [09:22:57.499] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 09:22:57.510 [18956:10836:1101/092257.500:ERROR:device_event_log_impl.cc(214)] [09:22:57.500] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 09:23:53.946 [18956:19904:1101/092353.945:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 09:30:24.783 [12280:2540:1101/093024.782:ERROR:device_event_log_impl.cc(214)] [09:30:24.782] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 09:30:24.783 [12280:2540:1101/093024.783:ERROR:device_event_log_impl.cc(214)] [09:30:24.783] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 09:30:51.88 [7164:17312:1101/093051.087:ERROR:device_event_log_impl.cc(214)] [09:30:51.087] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 09:30:51.89 [7164:17312:1101/093051.088:ERROR:device_event_log_impl.cc(214)] [09:30:51.088] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 09:31:47.699 [7164:3972:1101/093147.697:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 11:01:10.561 [13952:20932:1101/110110.558:ERROR:device_event_log_impl.cc(214)] [11:01:10.559] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:01:10.562 [13952:20932:1101/110110.560:ERROR:device_event_log_impl.cc(214)] [11:01:10.560] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:02:06.343 [13952:4760:1101/110206.341:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 11:22:16.385 [20684:20788:1101/112216.384:ERROR:device_event_log_impl.cc(214)] [11:22:16.385] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:22:16.386 [20684:20788:1101/112216.385:ERROR:device_event_log_impl.cc(214)] [11:22:16.386] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:23:13.191 [20684:5412:1101/112313.190:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 11:35:37.10 [20008:9072:1101/113537.010:ERROR:device_event_log_impl.cc(214)] [11:35:37.010] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:35:37.12 [20008:9072:1101/113537.011:ERROR:device_event_log_impl.cc(214)] [11:35:37.011] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:36:02.464 [17052:8732:1101/113602.464:ERROR:device_event_log_impl.cc(214)] [11:36:02.464] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:36:02.465 [17052:8732:1101/113602.465:ERROR:device_event_log_impl.cc(214)] [11:36:02.465] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:37:00.248 [17052:20928:1101/113700.247:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 01, 2022 11:44:49.871 NEW SESSION
+11월 01, 2022 11:44:49.871 [11196:18028:1101/114449.869:ERROR:device_event_log_impl.cc(214)] [11:44:49.869] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:44:49.872 [11196:18028:1101/114449.870:ERROR:device_event_log_impl.cc(214)] [11:44:49.870] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:45:46.82 [11196:16424:1101/114546.081:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 11:49:30.378 [6068:18672:1101/114930.377:ERROR:device_event_log_impl.cc(214)] [11:49:30.377] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:49:30.379 [6068:18672:1101/114930.378:ERROR:device_event_log_impl.cc(214)] [11:49:30.378] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:50:26.148 [6068:7804:1101/115026.146:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 11:50:51.371 [18788:18324:1101/115051.371:ERROR:device_event_log_impl.cc(214)] [11:50:51.371] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:50:51.372 [18788:18324:1101/115051.372:ERROR:device_event_log_impl.cc(214)] [11:50:51.372] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:51:47.180 [18788:6764:1101/115147.179:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 11:52:51.374 [18824:18268:1101/115251.373:ERROR:device_event_log_impl.cc(214)] [11:52:51.373] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:52:51.375 [18824:18268:1101/115251.375:ERROR:device_event_log_impl.cc(214)] [11:52:51.374] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 11:53:47.349 [18824:19428:1101/115347.347:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 14:09:47.28 [18824:18268:1101/140947.027:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 01, 2022 14:22:32.463 [18824:18268:1101/142232.462:ERROR:device_event_log_impl.cc(214)] [14:22:32.462] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+11월 01, 2022 16:53:47.360 [18824:16412:1101/165347.357:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 18:22:27.779 [18200:19848:1101/182227.777:ERROR:device_event_log_impl.cc(214)] [18:22:27.777] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 18:22:27.779 [18200:19848:1101/182227.779:ERROR:device_event_log_impl.cc(214)] [18:22:27.778] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 18:23:23.509 [18200:9308:1101/182323.507:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 18:27:05.817 [18200:19848:1101/182705.816:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 01, 2022 19:07:53.733 [19980:13084:1101/190753.733:ERROR:device_event_log_impl.cc(214)] [19:07:53.732] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 19:07:53.734 [19980:13084:1101/190753.733:ERROR:device_event_log_impl.cc(214)] [19:07:53.733] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 19:08:49.896 [19980:19828:1101/190849.895:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 01, 2022 20:03:00.412 NEW SESSION
+11월 01, 2022 20:03:00.412 [16236:1320:1101/200300.411:ERROR:device_event_log_impl.cc(214)] [20:03:00.411] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 20:03:00.413 [16236:1320:1101/200300.411:ERROR:device_event_log_impl.cc(214)] [20:03:00.412] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 20:03:56.120 [16236:21412:1101/200356.118:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 01, 2022 20:50:44.33 [9840:19688:1101/205044.032:ERROR:device_event_log_impl.cc(214)] [20:50:44.032] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 20:50:44.34 [9840:19688:1101/205044.033:ERROR:device_event_log_impl.cc(214)] [20:50:44.033] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 20:51:40.803 [9840:12156:1101/205140.801:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 01, 2022 21:11:14.397 NEW SESSION
+11월 01, 2022 21:11:14.397 [6000:18608:1101/211114.395:ERROR:device_event_log_impl.cc(214)] [21:11:14.395] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 21:11:14.399 [6000:18608:1101/211114.396:ERROR:device_event_log_impl.cc(214)] [21:11:14.396] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 01, 2022 21:12:10.143 [6000:13968:1101/211210.141:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 11, 2022 17:49:31.792 NEW SESSION
+11월 11, 2022 17:49:31.792 [6004:19796:1111/174931.777:ERROR:device_event_log_impl.cc(215)] [17:49:31.777] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 11, 2022 17:49:31.794 [6004:19796:1111/174931.778:ERROR:device_event_log_impl.cc(215)] [17:49:31.778] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 11, 2022 17:50:27.550 [6004:19480:1111/175027.548:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 20, 2022 17:15:48.555 NEW SESSION
+11월 20, 2022 17:15:48.555 [22156:21124:1120/171548.549:ERROR:device_event_log_impl.cc(215)] [17:15:48.549] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 20, 2022 17:15:48.556 [22156:21124:1120/171548.550:ERROR:device_event_log_impl.cc(215)] [17:15:48.550] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 20, 2022 17:16:44.277 [22156:21132:1120/171644.275:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 20, 2022 17:18:59.26 [22156:21124:1120/171859.025:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 20, 2022 19:09:31.308 [22156:21124:1120/190931.307:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 20, 2022 21:06:44.151 [22156:17012:1120/210644.138:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 21, 2022 24:44:55.367 [22156:17012:1121/004455.359:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 21, 2022 24:44:55.406 [22156:23920:1121/004455.400:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 21, 2022 03:53:14.162 [22156:3496:1121/035314.141:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+11월 21, 2022 05:50:38.432 [22156:17012:1121/055038.428:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -105
+11월 21, 2022 05:50:38.611 [22156:25432:1121/055038.610:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+11월 21, 2022 05:50:38.627 [22156:11612:1121/055038.626:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 21, 2022 07:20:45.779 [22156:17012:1121/072045.773:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 21, 2022 09:07:19.211 [22156:21124:1121/090719.210:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 21, 2022 09:07:19.212 [22156:21124:1121/090719.210:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 21, 2022 09:51:14.548 [22156:17012:1121/095114.516:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 21, 2022 09:51:15.873 [22156:21124:1121/095115.872:ERROR:device_event_log_impl.cc(215)] [09:51:15.872] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+11월 21, 2022 09:51:15.936 [22156:21124:1121/095115.934:ERROR:device_event_log_impl.cc(215)] [09:51:15.933] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+11월 21, 2022 10:50:38.284 [22156:22748:1121/105038.283:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 21, 2022 13:12:19.897 [22156:17012:1121/131219.896:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 21, 2022 15:50:38.298 [22156:18816:1121/155038.296:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 21, 2022 20:50:38.309 [22156:26448:1121/205038.308:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 22, 2022 02:19:59.662 [22156:22000:1122/021959.638:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+11월 22, 2022 02:19:59.697 [22156:26448:1122/021959.695:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 22, 2022 02:20:00.78 [22156:17012:1122/022000.077:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 22, 2022 05:19:31.144 [22156:22000:1122/051931.075:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+11월 22, 2022 05:19:31.446 [22156:17012:1122/051931.445:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 22, 2022 07:48:31.354 [22156:9156:1122/074831.347:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 22, 2022 08:42:12.776 [22156:22000:1122/084212.771:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+11월 22, 2022 08:42:12.995 [22156:17012:1122/084212.993:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+
+11월 23, 2022 08:58:22.126 NEW SESSION
+11월 23, 2022 08:58:22.126 [28964:34852:1123/085822.112:ERROR:device_event_log_impl.cc(215)] [08:58:22.113] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 08:58:22.127 [28964:34852:1123/085822.112:ERROR:device_event_log_impl.cc(215)] [08:58:22.113] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 08:58:22.128 [28964:34852:1123/085822.113:ERROR:device_event_log_impl.cc(215)] [08:58:22.113] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+11월 23, 2022 09:56:15.386 NEW SESSION
+11월 23, 2022 09:56:15.386 [10576:4004:1123/095615.381:ERROR:device_event_log_impl.cc(215)] [09:56:15.381] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 09:56:15.387 [10576:4004:1123/095615.382:ERROR:device_event_log_impl.cc(215)] [09:56:15.382] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 09:56:15.388 [10576:4004:1123/095615.382:ERROR:device_event_log_impl.cc(215)] [09:56:15.382] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 09:56:58.126 [15460:8196:1123/095658.125:ERROR:device_event_log_impl.cc(215)] [09:56:58.125] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 09:56:58.126 [15460:8196:1123/095658.125:ERROR:device_event_log_impl.cc(215)] [09:56:58.126] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 09:56:58.128 [15460:8196:1123/095658.126:ERROR:device_event_log_impl.cc(215)] [09:56:58.126] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 09:57:53.859 [15460:288:1123/095753.858:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 23, 2022 13:23:43.614 [15460:5956:1123/132343.602:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 23, 2022 13:41:37.767 [15460:8196:1123/134137.766:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 23, 2022 13:41:37.768 [15460:8196:1123/134137.766:ERROR:interface_endpoint_client.cc(690)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+11월 23, 2022 15:38:53.187 NEW SESSION
+11월 23, 2022 15:38:53.187 [12556:16724:1123/153853.185:ERROR:device_event_log_impl.cc(215)] [15:38:53.185] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 15:38:53.188 [12556:16724:1123/153853.185:ERROR:device_event_log_impl.cc(215)] [15:38:53.185] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 15:38:53.188 [12556:16724:1123/153853.185:ERROR:device_event_log_impl.cc(215)] [15:38:53.185] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 15:39:49.886 [12556:18312:1123/153949.884:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 23, 2022 16:24:41.14 [12556:16992:1123/162441.007:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 23, 2022 17:02:03.733 [3380:17372:1123/170203.732:ERROR:device_event_log_impl.cc(215)] [17:02:03.732] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 17:02:03.734 [3380:17372:1123/170203.733:ERROR:device_event_log_impl.cc(215)] [17:02:03.733] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 17:02:03.734 [3380:17372:1123/170203.733:ERROR:device_event_log_impl.cc(215)] [17:02:03.733] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 23, 2022 17:02:59.483 [3380:5636:1123/170259.481:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 23, 2022 18:23:01.623 [3380:3216:1123/182301.620:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 23, 2022 20:04:12.210 [3380:3216:1123/200412.201:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 23, 2022 22:22:35.459 [3380:13732:1123/222235.438:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 23, 2022 22:22:35.540 [3380:3216:1123/222235.539:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -105
+11월 23, 2022 22:22:35.885 [3380:10788:1123/222235.884:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+11월 24, 2022 02:49:51.795 [3380:3216:1124/024951.794:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 24, 2022 03:52:40.267 [3380:13732:1124/035240.237:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 24, 2022 03:52:40.727 [3380:3216:1124/035240.726:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 24, 2022 05:43:45.309 [3380:3216:1124/054345.308:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 24, 2022 07:10:48.664 [3380:3216:1124/071048.642:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -331
+11월 24, 2022 08:33:41.09 [3380:3216:1124/083341.000:ERROR:connection_factory_impl.cc(426)] Failed to connect to MCS endpoint with error -7
+11월 24, 2022 08:52:40.208 [3380:10832:1124/085240.206:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 24, 2022 13:25:39.532 NEW SESSION
+11월 24, 2022 13:25:39.532 [16396:12040:1124/132539.528:ERROR:device_event_log_impl.cc(215)] [13:25:39.529] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 13:25:39.533 [16396:12040:1124/132539.529:ERROR:device_event_log_impl.cc(215)] [13:25:39.529] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 13:25:39.534 [16396:12040:1124/132539.529:ERROR:device_event_log_impl.cc(215)] [13:25:39.529] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 13:26:36.104 [16396:9104:1124/132636.102:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 24, 2022 14:10:15.793 [19068:16796:1124/141015.793:ERROR:device_event_log_impl.cc(215)] [14:10:15.793] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 14:10:15.794 [19068:16796:1124/141015.793:ERROR:device_event_log_impl.cc(215)] [14:10:15.793] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 14:10:15.795 [19068:16796:1124/141015.793:ERROR:device_event_log_impl.cc(215)] [14:10:15.793] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 14:11:11.527 [19068:18840:1124/141111.525:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 24, 2022 19:11:10.294 [19068:19932:1124/191110.285:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 24, 2022 19:24:06.900 [16668:19404:1124/192406.899:ERROR:device_event_log_impl.cc(215)] [19:24:06.899] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 19:24:06.901 [16668:19404:1124/192406.899:ERROR:device_event_log_impl.cc(215)] [19:24:06.899] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 19:24:06.901 [16668:19404:1124/192406.899:ERROR:device_event_log_impl.cc(215)] [19:24:06.899] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 24, 2022 19:25:03.535 [16668:17344:1124/192503.533:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 25, 2022 09:15:27.243 NEW SESSION
+11월 25, 2022 09:15:27.243 [11432:12352:1125/091527.238:ERROR:device_event_log_impl.cc(215)] [09:15:27.239] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:15:27.245 [11432:12352:1125/091527.239:ERROR:device_event_log_impl.cc(215)] [09:15:27.239] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:15:27.245 [11432:12352:1125/091527.239:ERROR:device_event_log_impl.cc(215)] [09:15:27.240] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:15:28.276 [11432:9336:1125/091528.274:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+
+11월 25, 2022 09:21:12.986 NEW SESSION
+11월 25, 2022 09:21:12.986 [16380:7156:1125/092112.982:ERROR:device_event_log_impl.cc(215)] [09:21:12.982] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:21:12.987 [16380:7156:1125/092112.982:ERROR:device_event_log_impl.cc(215)] [09:21:12.983] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:21:12.989 [16380:7156:1125/092112.983:ERROR:device_event_log_impl.cc(215)] [09:21:12.983] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:22:08.708 [16380:4764:1125/092208.706:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 25, 2022 09:28:58.827 [15652:15516:1125/092858.826:ERROR:device_event_log_impl.cc(215)] [09:28:58.826] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:28:58.828 [15652:15516:1125/092858.826:ERROR:device_event_log_impl.cc(215)] [09:28:58.826] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:28:58.829 [15652:15516:1125/092858.826:ERROR:device_event_log_impl.cc(215)] [09:28:58.826] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 09:29:54.585 [15652:15648:1125/092954.583:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 25, 2022 10:39:28.501 [15652:15516:1125/103928.500:ERROR:web_contents_delegate.cc(239)] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+11월 25, 2022 10:39:28.502 [15652:15516:1125/103928.500:ERROR:web_contents_delegate.cc(239)] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+11월 25, 2022 10:51:19.206 [7364:17624:1125/105119.205:ERROR:device_event_log_impl.cc(215)] [10:51:19.205] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:51:19.207 [7364:17624:1125/105119.206:ERROR:device_event_log_impl.cc(215)] [10:51:19.206] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:51:19.208 [7364:17624:1125/105119.206:ERROR:device_event_log_impl.cc(215)] [10:51:19.206] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:51:29.755 [15252:3688:1125/105129.753:ERROR:device_event_log_impl.cc(215)] [10:51:29.753] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:51:29.755 [15252:3688:1125/105129.753:ERROR:device_event_log_impl.cc(215)] [10:51:29.754] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:51:29.756 [15252:3688:1125/105129.753:ERROR:device_event_log_impl.cc(215)] [10:51:29.754] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:52:21.849 [6160:18340:1125/105221.849:ERROR:device_event_log_impl.cc(215)] [10:52:21.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:52:21.850 [6160:18340:1125/105221.849:ERROR:device_event_log_impl.cc(215)] [10:52:21.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:52:21.851 [6160:18340:1125/105221.849:ERROR:device_event_log_impl.cc(215)] [10:52:21.849] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 25, 2022 10:53:17.592 [6160:15180:1125/105317.590:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 26, 2022 15:39:03.949 NEW SESSION
+11월 26, 2022 15:39:03.949 [11932:18532:1126/153903.946:ERROR:device_event_log_impl.cc(215)] [15:39:03.946] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 26, 2022 15:39:03.949 [11932:18532:1126/153903.947:ERROR:device_event_log_impl.cc(215)] [15:39:03.947] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 26, 2022 15:39:59.688 [11932:18536:1126/153959.686:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 26, 2022 16:39:29.939 [18456:3872:1126/163929.938:ERROR:device_event_log_impl.cc(215)] [16:39:29.938] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 26, 2022 16:39:29.939 [18456:3872:1126/163929.939:ERROR:device_event_log_impl.cc(215)] [16:39:29.939] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 26, 2022 16:40:26.76 [18456:8812:1126/164026.074:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 27, 2022 16:49:37.126 NEW SESSION
+11월 27, 2022 16:49:37.126 [8948:8952:1127/164937.124:ERROR:device_event_log_impl.cc(215)] [16:49:37.124] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 27, 2022 16:49:37.127 [8948:8952:1127/164937.125:ERROR:device_event_log_impl.cc(215)] [16:49:37.125] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+
+11월 29, 2022 17:47:41.456 NEW SESSION
+11월 29, 2022 17:47:41.456 [18760:17740:1129/174741.448:ERROR:device_event_log_impl.cc(215)] [17:47:41.447] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 29, 2022 17:47:41.457 [18760:17740:1129/174741.448:ERROR:device_event_log_impl.cc(215)] [17:47:41.448] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 29, 2022 17:47:41.457 [18760:17740:1129/174741.448:ERROR:device_event_log_impl.cc(215)] [17:47:41.448] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 29, 2022 17:48:36.393 [18760:21184:1129/174836.392:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 29, 2022 20:26:39.649 [19140:11700:1129/202639.649:ERROR:device_event_log_impl.cc(215)] [20:26:39.648] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 29, 2022 20:26:39.650 [19140:11700:1129/202639.649:ERROR:device_event_log_impl.cc(215)] [20:26:39.648] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 29, 2022 20:26:39.652 [19140:11700:1129/202639.649:ERROR:device_event_log_impl.cc(215)] [20:26:39.649] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 29, 2022 20:27:35.402 [19140:3064:1129/202735.400:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 29, 2022 21:08:20.764 [19140:11700:1129/210820.763:ERROR:device_event_log_impl.cc(215)] [21:08:20.762] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+11월 29, 2022 21:08:20.769 [19140:11700:1129/210820.768:ERROR:device_event_log_impl.cc(215)] [21:08:20.767] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+11월 30, 2022 01:27:35.476 [19140:19724:1130/012735.474:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 30, 2022 06:27:35.583 [19140:19724:1130/062735.581:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 30, 2022 11:27:35.468 [19140:7716:1130/112735.457:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 30, 2022 14:04:18.467 [19140:11700:1130/140418.461:ERROR:device_event_log_impl.cc(215)] [14:04:18.460] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+11월 30, 2022 14:04:18.470 [19140:11700:1130/140418.469:ERROR:device_event_log_impl.cc(215)] [14:04:18.469] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+11월 30, 2022 14:06:53.155 [19140:11700:1130/140653.147:ERROR:device_event_log_impl.cc(215)] [14:06:53.146] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+11월 30, 2022 14:06:53.156 [19140:11700:1130/140653.153:ERROR:device_event_log_impl.cc(215)] [14:06:53.153] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+11월 30, 2022 16:27:35.431 [19140:16688:1130/162735.430:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 30, 2022 17:52:07.878 [7348:19924:1130/175207.877:ERROR:device_event_log_impl.cc(215)] [17:52:07.877] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 30, 2022 17:52:07.879 [7348:19924:1130/175207.877:ERROR:device_event_log_impl.cc(215)] [17:52:07.877] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 30, 2022 17:52:07.881 [7348:19924:1130/175207.877:ERROR:device_event_log_impl.cc(215)] [17:52:07.877] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+11월 30, 2022 17:53:05.132 [7348:17404:1130/175305.131:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 30, 2022 18:05:55.198 [7348:22808:1130/180555.197:ERROR:mcs_client.cc(756)] Received close command, resetting connection.
+11월 30, 2022 22:35:17.914 [7348:19924:1130/223517.909:ERROR:device_event_log_impl.cc(215)] [22:35:17.908] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+11월 30, 2022 22:35:17.916 [7348:19924:1130/223517.913:ERROR:device_event_log_impl.cc(215)] [22:35:17.913] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+11월 30, 2022 22:53:05.199 [7348:23064:1130/225305.197:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 01, 2022 03:53:05.222 [7348:19520:1201/035305.219:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 01, 2022 08:53:05.358 [7348:19520:1201/085305.356:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 01, 2022 09:13:33.647 [21784:25740:1201/091333.646:ERROR:device_event_log_impl.cc(215)] [09:13:33.647] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2022 09:13:33.648 [21784:25740:1201/091333.647:ERROR:device_event_log_impl.cc(215)] [09:13:33.647] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2022 09:13:33.649 [21784:25740:1201/091333.647:ERROR:device_event_log_impl.cc(215)] [09:13:33.647] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2022 09:14:13.305 [20712:24632:1201/091413.304:ERROR:device_event_log_impl.cc(215)] [09:14:13.304] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2022 09:14:13.306 [20712:24632:1201/091413.305:ERROR:device_event_log_impl.cc(215)] [09:14:13.305] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2022 09:14:13.307 [20712:24632:1201/091413.305:ERROR:device_event_log_impl.cc(215)] [09:14:13.305] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 01, 2022 09:15:09.119 [20712:8272:1201/091509.118:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 01, 2022 14:15:09.03 [20712:23424:1201/141509.001:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 01, 2022 19:15:08.995 [20712:19324:1201/191508.986:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 01, 2022 20:33:43.857 [20712:24632:1201/203343.856:ERROR:interface_endpoint_client.cc(694)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 01, 2022 20:33:43.858 [20712:24632:1201/203343.856:ERROR:interface_endpoint_client.cc(694)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 01, 2022 20:33:43.859 [20712:24632:1201/203343.856:ERROR:interface_endpoint_client.cc(694)] Message 1 rejected by interface blink.mojom.WidgetHost
+12월 02, 2022 24:15:09.26 [20712:19324:1202/001509.023:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 02, 2022 05:15:09.48 [20712:19324:1202/051509.045:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 02, 2022 09:22:08.664 [20712:24632:1202/092208.662:ERROR:device_event_log_impl.cc(215)] [09:22:08.661] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+12월 02, 2022 09:22:08.670 [20712:24632:1202/092208.669:ERROR:device_event_log_impl.cc(215)] [09:22:08.668] USB: usb_service_win.cc:307 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+12월 02, 2022 10:15:09.42 [20712:26724:1202/101509.040:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

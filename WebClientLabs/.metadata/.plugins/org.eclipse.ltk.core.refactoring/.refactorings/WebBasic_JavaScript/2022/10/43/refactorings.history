@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WebBasic_JavaScript/src/main/webapp/E42_Arrow_Function.html&apos; to &apos;Ex42_Arrow_Function.html&apos;" description="Rename resource &apos;E42_Arrow_Function.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/E42_Arrow_Function.html" name="Ex42_Arrow_Function.html" stamp="1666160895563" updateReferences="true"/>
+</session>

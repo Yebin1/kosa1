@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		let checkflag = "false"; // 문자열 (전역 변수)
+
+		function checkForm() {
+			let list = document.myform.list; // name 속성이 같은 녀석들 ... Array
+			console.log(list); // [0][1][2] ...
+			console.log(list.length);
+
+			if (checkflag == "false") {
+				for (let index in list) {
+					console.log(list[index]);
+					// [0] >> <input type="checkbox" name="list" value="java">
+					list[index].checked = true;
+				}
+				checkflag = "true";
+				return "[선택해제하기]";
+			} else {
+				for (let index in list) {
+					list[index].checked=false;
+				}
+				checkflag="false";
+				return "[전체선택]";
+
+			}
+		}
+
+		function checkForm2(list) {
+			console.log(list);
+			return "...";
+		}
+
+
+	</script>
+</head>
+
+<body>
+	<form action="" name="myform">
+		좋아하는 과목은 : <br>
+		<input type="checkbox" name="list" value="java">JAVA<br>
+		<input type="checkbox" name="list" value="oracle">ORACLE<br>
+		<input type="checkbox" name="list" value="html">HTML<br>
+		<input type="checkbox" name="list" value="css">CSS<br>
+		<input type="checkbox" name="list" value="script">SCRIPT<br>
+		<input type="button" value="[전체선택]" onclick="this.value = checkForm()"><br>
+		<br> <input type="button" value="[전체선택]" onclick="this.value = checkForm2(this.form.list)"><br>
+		x
+	</form>
+</body>
+
+</html>

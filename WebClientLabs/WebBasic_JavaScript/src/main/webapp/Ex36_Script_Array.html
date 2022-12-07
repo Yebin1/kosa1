@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        // javascript 동적 배열 >> JAVA 비교 >> Javasvript Collection
+
+        let array = ['포도', '사과'];
+        console.log(array.toString()); // toString() 재정의, 출력 // 포도,사과
+        console.log(array + "-default toString() 생략"); // 포도,사과-default toString() 생략
+
+        for (let i = 0; i < array.length; i++) {
+            console.log(array[i]);
+        }
+        // 포도
+        // 사과
+
+        for (let index in array) {
+            console.log(array[index]);
+        }
+
+        // ES6 문법
+        for (let value of array) {
+            console.log(value);
+        }
+
+        // 동적
+        array[2] = '바나나';
+        console.log(array[2]); // 바나나
+        console.log(array.toString() + " / " + array.length); // 포도, 사과, 바나나 / 3
+
+        array[10] = '애플망고';
+        console.log(array[10]); // 애플망고
+        // 동적으로 데이터 추가 >> 권장하지는 않으나 가능한 방법
+        console.log(typeof (array[10])); // string
+        console.log(array[9] + " >> array 9번방 접근"); // undefined
+
+        let array2 = ['one', 'two', 'three'];
+        // 권장하지 않으나 가능한 방법
+        array2.length = 2; // 배열 크기 축소
+        console.log(array2.toString() + "length: " + array2.length); // one,two
+
+        array2.length = 4; // 확장도 가능
+        console.log(array2.toString() + "length: " + array2.length);
+
+
+        // 권장 방법
+        // Array >> stack >> LIFO >> push >> pop
+        let array3 = [];
+        array3.push("aaa");
+        array3.push("bbb");
+        array3.push("ccc");
+        array3.push("ddd");
+        console.log(array3.pop()); // ddd
+        console.log(array3.pop()); // ccc
+        console.log(array3.pop()); // bbb
+        console.log(array3.pop()); // aaa
+        console.log(array3.pop()); // undefined
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
