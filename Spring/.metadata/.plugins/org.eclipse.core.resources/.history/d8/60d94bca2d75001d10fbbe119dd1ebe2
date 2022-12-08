@@ -1,0 +1,9 @@
+package DI_09_Spring;
+
+public class ProtocolHandlerFactory {
+	
+	public ProtocolHandlerFactory() {
+		System.out.println("ProtocolHandlerFactory 기본 생성자 호출");
+	}
+
+}

@@ -1,0 +1,27 @@
+
+12월 07, 2022 16:51:35.09 NEW SESSION
+12월 07, 2022 16:51:35.09 [15376:14512:1207/165135.089:ERROR:device_event_log_impl.cc(215)] [16:51:35.090] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 07, 2022 16:51:35.10 [15376:14512:1207/165135.092:ERROR:device_event_log_impl.cc(215)] [16:51:35.092] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 07, 2022 16:52:46.73 [8772:15572:1207/165246.721:ERROR:device_event_log_impl.cc(215)] [16:52:46.722] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 07, 2022 16:52:46.74 [8772:15572:1207/165246.724:ERROR:device_event_log_impl.cc(215)] [16:52:46.724] USB: usb_device_handle_win.cc:1045 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+12월 07, 2022 16:52:52.87 [8772:11500:1207/165252.860:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 16:53:22.46 [8772:11500:1207/165322.456:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 16:53:43.41 [8772:8752:1207/165343.400:ERROR:util.cc(133)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+12월 07, 2022 16:54:10.64 [8772:11500:1207/165410.637:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 16:55:54.56 [8772:11500:1207/165554.550:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 16:59:08.89 [8772:11500:1207/165908.888:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 17:02:47.62 [8772:9280:1207/170247.608:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:03:44.84 [8772:9280:1207/170344.832:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:05:10.60 [8772:9280:1207/170510.600:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:06:55.88 [8772:11500:1207/170655.872:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 17:07:04.08 [8772:14824:1207/170704.074:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:09:54.20 [8772:9280:1207/170954.191:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:13:54.28 [8772:14824:1207/171354.271:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:17:02.02 [8772:11500:1207/171702.014:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 17:19:54.28 [8772:14824:1207/171954.272:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 2
+12월 07, 2022 17:32:16.92 [8772:11500:1207/173216.884:ERROR:connection_factory_impl.cc(472)] ConnectionHandler failed with net error: -2
+12월 07, 2022 17:32:16.95 [8772:11500:1207/173216.933:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 17:32:18.96 [8772:11500:1207/173218.959:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105
+12월 07, 2022 17:34:38.29 [8772:11500:1207/173438.256:ERROR:connection_factory_impl.cc(472)] ConnectionHandler failed with net error: -2
+12월 07, 2022 17:34:38.30 [8772:11500:1207/173438.262:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -109
+12월 07, 2022 17:34:40.29 [8772:11500:1207/173440.294:ERROR:connection_factory_impl.cc(427)] Failed to connect to MCS endpoint with error -105

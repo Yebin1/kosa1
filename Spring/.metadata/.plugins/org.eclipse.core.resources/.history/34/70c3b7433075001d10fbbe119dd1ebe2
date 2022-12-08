@@ -1,0 +1,9 @@
+package DI_10_Spring;
+
+import java.util.Properties;
+
+public class BookClient {
+	
+	private Properties config;
+
+}

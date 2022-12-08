@@ -1,0 +1,8 @@
+package DI_06_Spring;
+
+public class ArticleService {
+	
+	// ArticleService는 ArticleDao 의존
+	// 주입
+
+}

@@ -1,0 +1,21 @@
+package DI_05_Spring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class HelloApp {
+
+	public static void main(String[] args) {
+
+		MyBean mybean = new MyBean();
+		MyBean mybean2 = new MyBean("hong");
+		MyBean mybean3 = new MyBean();
+		// new할 때마다 각각 생성
+		System.out.println(mybean); // DI_05_Spring.MyBean@21bcffb5
+		System.out.println(mybean2); // DI_05_Spring.MyBean@380fb434
+		System.out.println(mybean3); // DI_05_Spring.MyBean@668bc3d5
+		
+		Singleton single = Singleton.getInstance();
+	}
+
+}

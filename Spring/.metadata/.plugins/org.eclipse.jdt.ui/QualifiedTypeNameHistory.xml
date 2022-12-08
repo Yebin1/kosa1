@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="DI.NewRecord"/>
+<fullyQualifiedTypeName name="DI.NewRecordView"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="org.springframework.core.io.ClassPathResource"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="DI_01.MessageBean"/>
+<fullyQualifiedTypeName name="DI_06_Spring.OracleArticleDao"/>
+<fullyQualifiedTypeName name="DI_06_Spring.MysqlArticleDao"/>
+<fullyQualifiedTypeName name="DI_06_Spring.ArticleService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="DI_08_Spring.ArticleDao"/>
+<fullyQualifiedTypeName name="DI_09_Spring.ProtocolHandlerFactory"/>
+<fullyQualifiedTypeName name="DI_09_Spring.RssHandler"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="DI_Annotation_01.MonitorViewer"/>
+<fullyQualifiedTypeName name="DI_Annotation_01.Recorder"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowire"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="DI_Annotation_04.ConfigContext"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+</qualifiedTypeNameHistroy>

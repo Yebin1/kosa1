@@ -1,0 +1,9 @@
+MVC 게시판
+
+Model (dao, dto, service)
+
+View (jsp)
+
+Controller (servlet)
+
+클라이언트 요청 >> Controller > service > dao, dto > service > Controller > view > 응답

@@ -1,0 +1,5 @@
+import org.springframework.web.servlet.mvc.Controller;
+
+public class introController implements Controller {
+
+}

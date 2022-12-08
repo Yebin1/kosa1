@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+	   
+<!-- 
+xml >> 객체의 생성과 조립을 하는 파일
+java 코드에서 new 했던 작업을 xml에서 하기
+MessageBean_en messagebean_en = new MessageBean_en();
+MessageBean_kr messagebean_kr = new MessageBean_kr();
+ -->
+ 
+ <bean id="messagebean" class="DI_03_Spring.MessageBean_en"></bean>
+ <!-- 영문 버전으로 변경하고 싶을 때 class만 수정하면 HelloApp의 코드를 수정할 필요X -->
+ 
+ 
+ 
+</beans>

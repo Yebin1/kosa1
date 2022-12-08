@@ -1,0 +1,11 @@
+MVC 게시판
+
+Model (dao, dto, service)
+View (jsp)
+Controller (servlet)
+
+
+클라이언트 요청 >> controller > service > dao, dto > service > controller > view > 응답
+
+1. 요구사항
+DB 2개 사용

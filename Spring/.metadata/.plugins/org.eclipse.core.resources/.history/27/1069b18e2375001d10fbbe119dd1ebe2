@@ -1,0 +1,4 @@
+Spring
+
+1. 생성자 주입 (constructor injection)
+2. setter 함수 주입 (setter injection)

@@ -1,0 +1,7 @@
+package DI;
+
+// 점수를 출력하는 클래스
+public class NewRecordView {
+
+	
+}

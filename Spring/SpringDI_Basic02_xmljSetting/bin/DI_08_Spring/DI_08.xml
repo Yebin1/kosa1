@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 
+객체의 생성과 조립(주입)
+
+Spring은 자신만의 컨테이너를 제공 (Spring 전용 메모리 공간) 안에
+xml 또는 annotation을 통해 객체를 생성하고 조립하는 과정을 수행 (객체간 관계 설정)
+
+컨테이너 안 생성된 객체를 불러서 ... getbean() 함수
+
+IOC 컨테이너 (제어의 역전)
+프로그램의 제어 구조가 바뀜
+내가 주도했던 코드 >> Spring이 주체가 됨
+작은 단위의 부품을 만들어 놓고 조립하는 행위 (레고 블럭 ..)
+
+Java 코드
+
+JobExecute jobexecute = new JobExecute("hong", 100); // String, int
+JobExecute jobexecute2 = new JobExecute("lim", 1000L); // String, long
+JobExecute jobexecute3 = new JobExecute("lim", "hong"); // String, String
+		
+ArticleDao articledao = new ArticleDao();
+jobexecute.setArticledao(articledao); // setArticledao: DI_08_Spring.ArticleDao@3cda1055
+jobexecute.setData(500); // setData: 500
+
+ -->
+
+<bean id="articleDao" class="DI_08_Spring.ArticleDao"></bean>
+<bean id="jobExecute" class="DI_08_Spring.JobExecute">
+	<constructor-arg>
+		<value>hong</value>
+	</constructor-arg>
+	<constructor-arg>
+		<value type="long">100</value>
+	</constructor-arg>
+	
+	<!-- setter를 구현하고 있는 member field명 -->
+	<property name="articledao">
+		<ref bean="articleDao" />
+	</property>
+	
+	<property name="data">
+		<value>500</value>
+	</property>
+</bean>
+
+<!-- 
+설정에서 타입을 명시하지 않은 값은 모두 문자열 
+<value type="long">100</value>
+<value type="int">100</value>
+와 같은 방식으로 타입 명시
+ -->
+
+</beans>

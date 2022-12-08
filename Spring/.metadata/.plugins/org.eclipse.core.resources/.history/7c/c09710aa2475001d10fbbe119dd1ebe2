@@ -1,0 +1,14 @@
+package DI_07_Spring;
+
+public class HelloApp {
+
+	public static void main(String[] args) {
+		
+		ProtocolHandler handler = new ProtocolHandler();
+		
+		List<MyFilter> list = new ArrayList<>();
+		handler.setFilters(filters);
+
+	}
+
+}

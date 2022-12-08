@@ -1,0 +1,27 @@
+package DI_07_Spring;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class HelloApp {
+
+	public static void main(String[] args) {
+		
+		ProtocolHandler handler = new ProtocolHandler();
+		
+		List<MyFilter> list = new ArrayList<MyFilter>();
+		list.add(new EncFilter());
+		list.add(new HeaderFilter());
+		list.add(new ZipFilter());
+		
+		// 주소값 전달 (의존성 주입)
+		handler.setFilters(list);
+		
+		System.out.println(handler.filter_length()); // 3
+		System.out.println(list);
+		// [DI_07_Spring.EncFilter@73f792cf, 
+		// DI_07_Spring.HeaderFilter@2ed94a8b, 
+		// DI_07_Spring.ZipFilter@38082d64]
+	}
+
+}

@@ -1,0 +1,18 @@
+package DI_09_Spring;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HelloApp {
+
+	public static void main(String[] args) {
+		
+		ProtocolHandlerFactory factory = new ProtocolHandlerFactory();
+		
+		Map<String, ProtocolHandler> handler = new HashMap<String, ProtocolHandler>();
+		
+		factory.setHandlers(handlers);
+
+	}
+
+}
