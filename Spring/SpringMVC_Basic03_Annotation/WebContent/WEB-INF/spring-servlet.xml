@@ -49,4 +49,7 @@
 <!-- TEST 3 -->
 <bean class="com.controller.OrderController"></bean>
 
+<!-- TEST 4 -->
+<bean class="com.controller.SearchController"></bean>
+
 </beans>
