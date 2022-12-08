@@ -21,12 +21,11 @@
 4. 컨테이너 안에 객체가 생성되고 주입이 되어 있음 ...
 5. hello.do에 대해 handler mapping 작업 >> 실행할 객체를 찾음 >> id="/hello.do" >> handleRequest 함수가 자동 실행
 
-
-
  -->
 
 <!-- <bean id="/hello.do" class="com.controller.HelloController"></bean> -->
 
+<context:annotation-config />
 <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix">
 		<value>/WEB-INF/views/</value>
@@ -38,5 +37,13 @@
 
 <!-- TEST 1 -->
 <bean id="helloController" class="com.controller.HelloController"></bean>
+
+<!-- TEST 2 -->
+<!-- 
+하나의 요청 주소를 전송 방식으로 구분 >> GET, POST
+화면, 서비스 처리 분리
+ -->
+<bean class="com.controller.NewArticleController"></bean> <!-- id는 필요 없음 객체만 있으면 됨 !! -->
+<bean class="com.service.ArticleService"></bean>
 
 </beans>
