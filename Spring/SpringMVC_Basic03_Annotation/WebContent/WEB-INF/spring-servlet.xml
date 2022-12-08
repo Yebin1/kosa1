@@ -46,4 +46,7 @@
 <bean class="com.controller.NewArticleController"></bean> <!-- id는 필요 없음 객체만 있으면 됨 !! -->
 <bean class="com.service.ArticleService"></bean>
 
+<!-- TEST 3 -->
+<bean class="com.controller.OrderController"></bean>
+
 </beans>
