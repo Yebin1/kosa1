@@ -70,7 +70,7 @@
 						<br/>
 						주소 : 
 					</address>
-				</p>				
+				</p>
 				<p>
 					Copyright ⓒ kosta.com All Right Reserved. </p>
 			</div>
