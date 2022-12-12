@@ -77,7 +77,7 @@
 									아이디
 								</dt>
 								<dd class="join-form-data">
-									<input type="text" name="uid" />
+									<input type="text" name="userid" />
 									<input id="btnCheckUid" class="button" type="button" value="중복확인" />
 								</dd>
 							</dl>
@@ -160,10 +160,11 @@
 								</dd>
 							</dl>						
 						</div>
-					</form>	
-					<div id="buttonLine">
+						<div id="buttonLine">
 						<input class="btn-okay button" type="submit" value="가입" />
-					</div>
+						</div>
+					</form>	
+					
 				</div>
 				<div id="navi">
 					<h2>회원가입</h2>

@@ -6,11 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.swing.tree.RowMapper;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import vo.Member;
@@ -26,8 +25,8 @@ public class NewMemberDao implements MemberDao {
 	}
 
 	/*
-	return this.jdbctemplate.queryForObject(sql, new
-	BeanPropertyRowMapper<Member>(Member.class), uid);
+	 * return this.jdbctemplate.queryForObject(sql, new
+	 * BeanPropertyRowMapper<Member>(Member.class), uid);
 	 */
 	public Member getMember(String uid) throws ClassNotFoundException, SQLException {
 		// 코드는 select 컬럼명 하고 DTO 가지는 memberfield 명이 같지 않은 경우
@@ -68,7 +67,7 @@ public class NewMemberDao implements MemberDao {
 				pstmt.setString(4, member.getGender());
 				pstmt.setString(5, member.getBirth());
 				pstmt.setString(6, member.getIsLunar());
-				pstmt.setString(7, member.getCPhone());
+				pstmt.setString(7, member.getCphone());
 				pstmt.setString(8, member.getEmail());
 				pstmt.setString(9, member.getHabit());
 

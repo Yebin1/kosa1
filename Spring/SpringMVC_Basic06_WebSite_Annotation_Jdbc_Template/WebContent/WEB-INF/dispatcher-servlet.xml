@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-      xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
                            http://www.springframework.org/schema/beans/spring-beans.xsd
@@ -23,16 +23,17 @@ IOC 컨테이너에 적재될 bean 객체 생성과 injection (DI)
   localhost:8090/website/customer/notice.htm
   
   @AutoWired
--->   
+-->	
 <!-- 모든 컨트롤러가 공통 사용 DAO 빈 객체  참조-->
 <context:annotation-config />
 <context:component-scan base-package="ncontroller"  />
 <context:component-scan base-package="dao"  />
-<!-- 스캔할 때 controller, service, repository, component ... 있으면 무조건 bean을 만듦 -->
 
 <!-- 파일 업로드 보조(반드시)  -->
 <bean  id="multipartResolver"    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-      <property name="maxUploadSize"    value="10485760"></property>
-      <property name="defaultEncoding"  value="UTF-8"></property>
-</bean>   
+		<property name="maxUploadSize"    value="10485760"></property>
+		<property name="defaultEncoding"  value="UTF-8"></property>
+</bean>	
 </beans> 
+
+

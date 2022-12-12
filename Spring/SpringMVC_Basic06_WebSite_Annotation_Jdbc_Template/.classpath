@@ -13,6 +13,5 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Spring/Labs/SpringMVC_Basic01_Controller/WebContent/WEB-INF/lib/spring-web-5.3.6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

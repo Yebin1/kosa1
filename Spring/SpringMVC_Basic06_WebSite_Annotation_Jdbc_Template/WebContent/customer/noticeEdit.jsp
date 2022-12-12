@@ -105,23 +105,22 @@
 						</dl>
 						<dl class="article-detail-row">
 							<dt class="article-detail-title">
-								첨부파일1
+								첨부파일_1
 							</dt>
 							<dd class="article-detail-data">
-								&nbsp;<input type="file" id="txtFile" name="file" />
+								&nbsp;<input type="file" id="txtFile" name="files[0]" />
 								          ${notice.fileSrc}
 							</dd>
 						</dl>
 						<dl class="article-detail-row">
 							<dt class="article-detail-title">
-								첨부파일2
+								첨부파일_2
 							</dt>
 							<dd class="article-detail-data">
-								&nbsp;<input type="file" id="txtFile" name="file" />
+								&nbsp;<input type="file" id="txtFile" name="files[1]" />
 								          ${notice.fileSrc2}
 							</dd>
 						</dl>
-
 						<div class="article-content" >
 							<textarea id="txtContent" class="txtContent" name="content">
 								${notice.content}
