@@ -1,22 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 <div id="header">
 			<div class="top-wrapper">
 				<h1 id="logo"><a href="/"><img src="" alt="로고" /></a></h1>
 				<h2 class="hidden">메인메뉴</h2>
 				<ul id="mainmenu" class="block_hlist">
 					<li>
-						<a href="">KOSA 가이드</a>
+						<a href="">KOSA가이드</a>
 					</li>
 					<li>
-						<a href="" >KOSA 과정</a>
+						<a href="" >KOSA과정</a>
 					</li>
 					<li>
 						<a href="" >KOSA</a>
@@ -32,7 +25,7 @@
 						<input type="submit" class="button" value="검색" />
 					</fieldset>
 				</form>
-				<h3 class="hidden">로그인 메뉴</h3>
+				<h3 class="hidden">로그인메뉴</h3>
 				<ul id="loginmenu" class="block_hlist">
 					<li>
 						<a href="${pageContext.request.contextPath}/index.htm">HOME</a>
@@ -54,6 +47,4 @@
 					</li>
 				</ul>
 			</div>
-		</div>
-</body>
-</html>
+</div>

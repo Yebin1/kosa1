@@ -85,6 +85,6 @@
 				<jsp:include page="inc/aside.jsp" />
 			</div>
 		</div>
-		<jsp:include page="/WEB-INF/views/inc/footer.jsp" />
+		<jsp:include page="../inc/footer.jsp" />
 	</body>
 </html>

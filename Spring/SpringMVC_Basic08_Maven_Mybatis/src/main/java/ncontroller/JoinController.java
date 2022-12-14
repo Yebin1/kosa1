@@ -25,9 +25,10 @@ public class JoinController {
 	//join.jsp 화면처리
 	@GetMapping("join.htm")
 	public String join() {
-		// return "join.jsp";
+		//return "join.jsp";
 		return "joinus/join";
-		// WEB-INF/views/joinus/join.jsp
+		//  /WEB-INF/views/joinus/join.jsp
+				
 	}
 	
 	

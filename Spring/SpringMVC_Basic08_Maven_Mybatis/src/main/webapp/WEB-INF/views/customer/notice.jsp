@@ -13,6 +13,7 @@
 	<body>
 		<jsp:include page="/WEB-INF/views/inc/header.jsp" />
 		<jsp:include page="inc/visual.jsp" />
+	
 		<div id="main">
 			<div class="top-wrapper clear">
 				<div id="content">
@@ -107,9 +108,10 @@
 						</div>
 					</div>
 				</div>
-			<jsp:include page="inc/aside.jsp" />
+				<jsp:include page="inc/aside.jsp" />
 			</div>
 		</div>
-		<jsp:include page="/WEB-INF/views/inc/footer.jsp" />
+		
+		<jsp:include page="../inc/footer.jsp" />
 	</body>
 </html>

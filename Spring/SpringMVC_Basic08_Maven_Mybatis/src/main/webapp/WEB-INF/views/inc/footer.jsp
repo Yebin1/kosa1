@@ -1,12 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 <div id="footer">
 			<div class="top-wrapper">
 				<h2><img src="" alt=""/></h2>
@@ -18,8 +11,6 @@
 					</address>
 				</p>				
 				<p>
-					Copyright ⓒ kosta.com All Right Reserved. </p>
+					Copyright ⓒKOSA.com All Right Reserved. </p>
 			</div>
-		</div>
-</body>
-</html>
+</div>
