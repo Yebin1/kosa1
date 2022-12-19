@@ -1,5 +1,7 @@
 package kr.or.kosa;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -10,23 +12,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * Handles requests for the application home page.
+ */
 @Controller
 public class HomeController {
-
+	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-
+	
+	
 	@RequestMapping(value = "/home.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home!");
-
 		return "home";
 	}
 	
-	@GetMapping("/intro/introduction.do")
+	@GetMapping(value="/intro/introduction.do")
 	public String introduction() {
-		logger.info("Welcome introduction!");
-		
+		logger.info("Welcome introduction");
 		return "intro/intro";
 	}
-
+	
 }
