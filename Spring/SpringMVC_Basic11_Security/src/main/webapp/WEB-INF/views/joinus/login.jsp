@@ -30,12 +30,13 @@
 					</ul>
 					<h3 class="hidden">회원가입 폼</h3>
 					<div id="join-form" class="join-form margin-large" >						
-						<form action="" method="post">                            <fieldset>
+						<form action="${pateContext.request.contextPath}/login" method="post">
+						<fieldset>
                                 <legend class="hidden">로그인 폼</legend>
                                 <h3><img src="images/txtTitle.png" /></h3>
                                 <ul id="loginBox">
-                                    <li><label for="uid">아이디</label><input name="UserName" class="text" /></li>
-                                    <li><label for="pwd">비밀번호</label><input type="password" name="Password" class="text" /></li>
+                                    <li><label for="uid">아이디</label><input name="username" class="text" /></li>
+                                    <li><label for="pwd">비밀번호</label><input type="password" name="password" class="text" /></li>
                                 </ul>
                                 <p><input type="submit" id="btnLogin" value="" /></p>
                                 <ul id="loginOption">

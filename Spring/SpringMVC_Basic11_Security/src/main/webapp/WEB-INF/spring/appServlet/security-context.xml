@@ -20,9 +20,11 @@ auto-config=true >> login 처리에 대한 프로세스 자동화됨
 CSRF 공격 (방어) >> CSRF 토큰값 자동 생성 >> disabled="true" >> 토큰 자동 생성 억제
  -->
 
+<!--
+in-memory 방식의 로그인 및 권한 테스트
 <security:http auto-config="true">
 	<security:csrf disabled="true"/> 
-	<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/> <!-- 가로채서 권한 검사 -->
+	<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/> 가로채서 권한 검사
 	<security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
 </security:http>
 <security:authentication-manager>
@@ -32,6 +34,25 @@ CSRF 공격 (방어) >> CSRF 토큰값 자동 생성 >> disabled="true" >> 토�
 			<security:user name="admin" password="1004" authorities="ROLE_USER, ROLE_ADMIN"/>
 		</security:user-service>
 	</security:authentication-provider>
-</security:authentication-manager>
+</security:authentication-manager> 
+-->
+
+<security:http auto-config="true">
+	<security:csrf disabled="true"/> 
+	<security:form-login login-page="/joinus/login.htm" authentication-failure-url="/joinus/login.htm?error" default-target-url="/index.htm"/>
+	<security:logout logout-success-url="/index.htm"/>
+	<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/>
+	<security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
+	<!-- <security:access-denied-handler error-page="/login/accessDenied.do"/> -->
+</security:http>
+<security:authentication-manager>
+	<security:authentication-provider>
+		<security:user-service>
+			<security:user name="hong" password="1004" authorities="ROLE_USER"/>
+			<security:user name="admin" password="1004" authorities="ROLE_USER, ROLE_ADMIN"/>
+		</security:user-service>
+	</security:authentication-provider>
+</security:authentication-manager> 
+
 
 </beans>

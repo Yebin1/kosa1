@@ -142,33 +142,81 @@ Security_context.xml
   result => auto-config="true"  인해서  Spring 제공하는 loginForm 으로 이동
 
 **spring 제공하는 [로그인 page] 소스  (3.1.4 로그인 폼)
+http://localhost:9000/kosa/login
+
+http://localhost:9000/kosa/{login}
 
 http://localhost:8090/SpringMVC_Basic03_WebSite_Mybatis_Security/{login}
 
 ***** Spring security 가 >  /login 요청(url)  >> 컨트롤에 Requestmapping 처리도 합니다
 ***** Spring security 가 >  /logout 요청(url)  >> 컨트롤에 Requestmapping 처리도 합니다
 
-
-<html>
-<head><title>Login Page</title></head>
-<body onload='document.f.username.focus();'>
-<h3>Login with Username and Password</h3>
-		<form name='f' action='/SpringMVC_Basic09/login' method='POST'>
-			<table>
-				<tr>
-					<td>User:</td>
-					<td><input type='text' name='username' value=''></td>
-				</tr>
-				<tr>
-					<td>Password:</td><td><input type='password' name='password'/></td>
-				</tr>
-			<tr><td colspan='2'><input name="submit" type="submit" value="Login"/></td></tr>
-		</table>
-		</form>
+<body>
+     <div class="container">
+      <form class="form-signin" method="post" action="/kosa_security/login">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p>
+          <label for="username" class="sr-only">Username</label>
+          <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+        </p>
+        <p>
+          <label for="password" class="sr-only">Password</label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+</div>
 </body>
-</html>
+
+>> 1. /login 요청 (인증 처리) >> Spring 내부적으로 Controller, method 구현되어 있고 자동 매핑
+>> 2. /login?error 인증 실패
+>> 3. 자동화 전제 조건 >> name='username' name='password'
+>> 4. /login 요청 >> Controller >> method >> username, password 받아서 검증 (autentication-provider)
+		in-memory 방식으로 구현 ... >> name="kglim" password="1004" 인증 확인 >> session 활용해서 저장 등 자동화
+>> 5. /logout 요청하면 >> 로그아웃 처리 >> session 소멸
+
+
+
 
 *************2단계 TEST CODE****************
+
+2단계 코드 
+		 login 페이지 처리
+	
+	>>form-login 속성 정의하기
+	login-page : login form 페이지 URL
+	username-parameter : form id의 name 속성값 (email >> id)
+	password-parameter : form pw의 name 속성값
+	login-processing-url : form action 값 (security를 이용해 인증처리)
+	default-target-url : 로그인 성공 시 이동 URL
+	authentication-failure-url : 로그인 실패 시 이동 URL
+	always-use-default-target : true 로 하면 무조건 default-target-url 로 이동한다.
+	false 로 하면 authentication-success-handler 대로 redirect 된다.
+	authentication-success-handler-ref : 로그인 성공 시 프로세스 정의, bean id 입력
+	만약 최종 로그인일시를 DB에 기록해야한다면 handler로 처리하는게 좋겠다.
+	res.sendRedirect 등으로 처리
+	authentication-failure-handler-ref : 로그인 실패 시 프로세스 정의, bean id 입력
+	
+	>> security:logout
+	logout-url : 로그아웃 처리할 URL (security가 알아서 만들기 때문에, 이 경로로 요청만 하면된다)
+	logout-success-url : 로그아웃 성공 시 이동 URL
+	success-handler-ref : 로그아웃 성공 시 프로세스 정의, bean id 입력
+	invalidate-session : 로그아웃 시 세션 삭제여부
+	
+	>>session-management
+	invalid-session-url : invalid session(세션 타임아웃 등) 일 때 이동 URL
+	max-sessions : 최대 허용 가능한 세션 수
+	expired-url : 중복 로그인 발생시 이동 URL (처음 접속한 세션이 invalidate가 되고 다음 요청시 invalid-session-url로 이동)
+	error-if-maximum-exceeded : max-sessions을 넘었을때 접속한 세션을 실패처리할지 여부 (expired-url와 얘중에 하나만 쓰면 될듯)
+	
+	아래 처리 한다고 해서 
+	login 처리 직접 하는 것은 아니다
+	
+	**
+	/login 요청 처리는 여전이 spring 위임하고 있다 .....
+	기본적인 요청 주소 , parametre 값은 정해진 대로
+
+
 
 1. 로그인 페이지 내가 만들 로그인 페이지로
 
