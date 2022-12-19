@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:security="http://www.springframework.org/schema/security"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/security 
+ http://www.springframework.org/schema/security/spring-security.xsd
+ http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 
+1단계
+인증과 권한 처리 (in-memory) 방식 (사용자 생성과 권한 부여를 메모리에서) TEST
+4.x.x 버전 이상 >> 권한 >> access = hasRole()
+
+인증과 권한을 사용하면 로그인 페이지와 로그인 처리에 대한 프로세스를 정의하지 않아도 Spring Template 통해 자동화 가능
+auto-config=true >> login 처리에 대한 프로세스 자동화됨
+CSRF 공격 (방어) >> CSRF 토큰값 자동 생성 >> disabled="true" >> 토큰 자동 생성 억제
+ -->
+
+<security:http auto-config="true">
+	<security:csrf disabled="true"/> 
+	<security:intercept-url pattern="/customer/noticeDetail.htm" access="hasRole('ROLE_USER')"/> <!-- 가로채서 권한 검사 -->
+	<security:intercept-url pattern="/customer/noticeReg.htm" access="hasRole('ROLE_ADMIN')"/>
+</security:http>
+<security:authentication-manager>
+	<security:authentication-provider>
+		<security:user-service>
+			<security:user name="hong" password="1004" authorities="ROLE_USER"/>
+			<security:user name="admin" password="1004" authorities="ROLE_USER, ROLE_ADMIN"/>
+		</security:user-service>
+	</security:authentication-provider>
+</security:authentication-manager>
+
+</beans>
