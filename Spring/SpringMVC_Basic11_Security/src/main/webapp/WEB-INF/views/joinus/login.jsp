@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+    
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -30,13 +33,24 @@
 					</ul>
 					<h3 class="hidden">회원가입 폼</h3>
 					<div id="join-form" class="join-form margin-large" >						
-						<form action="${pateContext.request.contextPath}/login" method="post">
+						<c:if test="${param.error != null}">
+   							<div>
+     							로그인실패<br>
+     							<c:if test="${SPRING_SECURITY_LAST_EXCEPTION != null}">
+     							 	이유 : <c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}" />
+    							</c:if>
+   							</div>
+  						</c:if>  
+						
+					<form action="${pageContext.request.contextPath}/login" method="post">                            
 						<fieldset>
                                 <legend class="hidden">로그인 폼</legend>
                                 <h3><img src="images/txtTitle.png" /></h3>
                                 <ul id="loginBox">
-                                    <li><label for="uid">아이디</label><input name="username" class="text" /></li>
-                                    <li><label for="pwd">비밀번호</label><input type="password" name="password" class="text" /></li>
+                                    <li><label for="uid">아이디</label>
+                                    			<input type="text"        name="username" class="text" /></li>
+                                    <li><label for="pwd">비밀번호</label>
+                                    			<input type="password" name="password" class="text" /></li>
                                 </ul>
                                 <p><input type="submit" id="btnLogin" value="" /></p>
                                 <ul id="loginOption">

@@ -21,6 +21,7 @@ CSRF 공격 (방어) >> CSRF 토큰값 자동 생성 >> disabled="true" >> 토�
  -->
 
 <!--
+1단계 테스트
 in-memory 방식의 로그인 및 권한 테스트
 <security:http auto-config="true">
 	<security:csrf disabled="true"/> 

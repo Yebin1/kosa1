@@ -3,6 +3,7 @@ package service;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.security.Principal;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,39 +82,73 @@ public class CustomerService {
 	}
 	
 	
-	//글쓰기처리 서비스
-	public String noticeReg(Notice n , HttpServletRequest request) {
-	  
-	    List<CommonsMultipartFile> files = n.getFiles();
-	    List<String> filenames = new ArrayList<String>(); //파일명 관리
-	 
-	    if(files != null  && files.size() > 0) {  //1개라 업로드된 파일이 존재하면
-			for(CommonsMultipartFile  mutifile  : files) {
-				String filename =  mutifile.getOriginalFilename();
-				String path = request.getServletContext().getRealPath("/customer/upload"); //배포된 서버 경로 
-				String fpath = path + "\\" + filename;
-				System.out.println(fpath);
-				
-				if(!filename.equals("")) {  //실 파일 업로드 (웹서버)
-					FileOutputStream fs =null;
-					try {
-						     fs = new FileOutputStream(fpath);
-						     fs.write(mutifile.getBytes());
-		     
-						     filenames.add(filename);  //db에 입력될 파일명
-						     
-					} catch (Exception e) {
-						e.printStackTrace();
-					}finally {
-						 try {
-							fs.close();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-					}
-				}
-			}
-	    }
+	  //글쓰기처리 서비스
+	   public String noticeReg(Notice n , HttpServletRequest request, Principal principal) {
+	     
+	       List<CommonsMultipartFile> files = n.getFiles();
+	       List<String> filenames = new ArrayList<String>(); //파일명 관리
+	    
+	       if(files != null  && files.size() > 0) {  //1개라 업로드된 파일이 존재하면
+	         for(CommonsMultipartFile  mutifile  : files) {
+	            String filename =  mutifile.getOriginalFilename();
+	            String path = request.getServletContext().getRealPath("/customer/upload"); //배포된 서버 경로 
+	            String fpath = path + "\\" + filename;
+	            System.out.println(fpath);
+	            
+	            if(!filename.equals("")) {  //실 파일 업로드 (웹서버)
+	               FileOutputStream fs =null;
+	               try {
+	                       fs = new FileOutputStream(fpath);
+	                       fs.write(mutifile.getBytes());
+	           
+	                       filenames.add(filename);  //db에 입력될 파일명
+	                       
+	               } catch (Exception e) {
+	                  e.printStackTrace();
+	               }finally {
+	                   try {
+	                     fs.close();
+	                  } catch (IOException e) {
+	                     e.printStackTrace();
+	                  }
+	               }
+	            }
+	         }
+	       }
+
+	    
+	    // Spring Security 인증 처리 하기
+	    // Spring Security가 생성한 객체 정보를 가지고 와서 필요한 정보 추출
+	    // 필요한 정보 >> 로그인한 ID, 권한 정보 (여러 개 >> ROLE_ADMIN, ROLE_USER ...)
+	    
+	    /*
+	    사용자의 권한 정보까지 필요할 때 사용
+	    
+	    SecurityContext context = SecurityContextHolder.getContext(); // Spring Security 전체 정보
+	    Authentication auth = context.getAuthentication(); // 인증에 관련된 것만
+	    
+	    UserDetails userinfo = (UserDetails) auth.getPrincipal(); // 인증된 사용자 정보만 추출
+	    
+	    System.out.println("권한 정보: " + userinfo.getAuthorities());
+	    System.out.println("사용자 ID: " + userinfo.getUsername());
+	    */
+	    
+	    /*
+	    체인 방법으로 기술하는 것이 좋음
+   		UserDetails user = (UserDetails)SecurityContextHolder.
+        	getContext().
+			getAuthentication().
+			getPrincipal(); //User들의 정보를 가지고 오겠다
+	    */
+	    
+	    // 기존 방법 >> session.getAttribute("userid")
+	    // 로그인한 사용자ID
+	    // n.setWriter(userinfo.getUsername());
+	    
+	    // 가장 간편한 방법
+	    // public String noticeReg(Notice n , HttpServletRequest request, Principal principal)
+	    // Principal Interface 정의 >> 인증 성공되면 인증에 대한 정보를 담은 객체의 주소를 자동으로 받을 수 있음
+	    n.setWriter(principal.getName().trim());
 	    
 	    
 		//파일명 (DTO)
