@@ -30,7 +30,9 @@ public class JoinController {
 		//  /WEB-INF/views/joinus/join.jsp
 				
 	}
-
+	
+	
+	
 	//POST 요청
 	@PostMapping("join.htm")
 	public String join(Member member) {
@@ -46,13 +48,9 @@ public class JoinController {
 		//http://localhost:8090/SpringMVC/index.htm
     }
 	
-	
-	// 로그인 요청
-	@GetMapping("login.htm")
+	//로그인 요청
+	@GetMapping(value="login.htm")
 	public String login() {
 		return "joinus/login";
 	}
-	
-	
-	
 }

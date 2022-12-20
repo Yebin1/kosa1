@@ -14,6 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
@@ -82,72 +86,72 @@ public class CustomerService {
 	}
 	
 	
-	  //글쓰기처리 서비스
-	   public String noticeReg(Notice n , HttpServletRequest request, Principal principal) {
-	     
-	       List<CommonsMultipartFile> files = n.getFiles();
-	       List<String> filenames = new ArrayList<String>(); //파일명 관리
+	//글쓰기처리 서비스
+	public String noticeReg(Notice n , HttpServletRequest request , Principal principal) {
+	  
+	    List<CommonsMultipartFile> files = n.getFiles();
+	    List<String> filenames = new ArrayList<String>(); //파일명 관리
+	 
+	    if(files != null  && files.size() > 0) {  //1개라 업로드된 파일이 존재하면
+			for(CommonsMultipartFile  mutifile  : files) {
+				String filename =  mutifile.getOriginalFilename();
+				String path = request.getServletContext().getRealPath("/customer/upload"); //배포된 서버 경로 
+				String fpath = path + "\\" + filename;
+				System.out.println(fpath);
+				
+				if(!filename.equals("")) {  //실 파일 업로드 (웹서버)
+					FileOutputStream fs =null;
+					try {
+						     fs = new FileOutputStream(fpath);
+						     fs.write(mutifile.getBytes());
+		     
+						     filenames.add(filename);  //db에 입력될 파일명
+						     
+					} catch (Exception e) {
+						e.printStackTrace();
+					}finally {
+						 try {
+							fs.close();
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}
+	    }
 	    
-	       if(files != null  && files.size() > 0) {  //1개라 업로드된 파일이 존재하면
-	         for(CommonsMultipartFile  mutifile  : files) {
-	            String filename =  mutifile.getOriginalFilename();
-	            String path = request.getServletContext().getRealPath("/customer/upload"); //배포된 서버 경로 
-	            String fpath = path + "\\" + filename;
-	            System.out.println(fpath);
-	            
-	            if(!filename.equals("")) {  //실 파일 업로드 (웹서버)
-	               FileOutputStream fs =null;
-	               try {
-	                       fs = new FileOutputStream(fpath);
-	                       fs.write(mutifile.getBytes());
-	           
-	                       filenames.add(filename);  //db에 입력될 파일명
-	                       
-	               } catch (Exception e) {
-	                  e.printStackTrace();
-	               }finally {
-	                   try {
-	                     fs.close();
-	                  } catch (IOException e) {
-	                     e.printStackTrace();
-	                  }
-	               }
-	            }
-	         }
-	       }
-
-	    
-	    // Spring Security 인증 처리 하기
-	    // Spring Security가 생성한 객체 정보를 가지고 와서 필요한 정보 추출
-	    // 필요한 정보 >> 로그인한 ID, 권한 정보 (여러 개 >> ROLE_ADMIN, ROLE_USER ...)
+	    //
+	    // Spring Security 인증처리 하기 
+	    // (Spring Security 생성한 객체정보를 가지고 와서 필요한 정보 추출)
+	    //  필요한 정보 : 로그인한 ID , 권한정보 (여러개: ROLE_ADMIN or ROLE_USER)
 	    
 	    /*
-	    사용자의 권한 정보까지 필요할 때 사용
+	       사용할때는 사용자의 권한정보까지 필요하다면 ... 
+	    SecurityContext context = SecurityContextHolder.getContext(); //스프링 시큐리티 전체 정보
+	    Authentication auth = context.getAuthentication(); // 인증에 관련만 것만
 	    
-	    SecurityContext context = SecurityContextHolder.getContext(); // Spring Security 전체 정보
-	    Authentication auth = context.getAuthentication(); // 인증에 관련된 것만
+	    UserDetails userinfo = (UserDetails) auth.getPrincipal(); //인증된 사용자 정보만
 	    
-	    UserDetails userinfo = (UserDetails) auth.getPrincipal(); // 인증된 사용자 정보만 추출
-	    
-	    System.out.println("권한 정보: " + userinfo.getAuthorities());
-	    System.out.println("사용자 ID: " + userinfo.getUsername());
+	    System.out.println("권한정보 : " + userinfo.getAuthorities());
+	    System.out.println("사용자ID: " + userinfo.getUsername());
+	    n.setWriter(userinfo.getUsername());
 	    */
 	    
 	    /*
-	    체인 방법으로 기술하는 것이 좋음
-   		UserDetails user = (UserDetails)SecurityContextHolder.
-        	getContext().
-			getAuthentication().
-			getPrincipal(); //User들의 정보를 가지고 오겠다
+	       체인방법으로 기술하는 것이 좋아요 
+	    UserDetails user = (UserDetails)SecurityContextHolder.
+                getContext().
+                getAuthentication().
+                getPrincipal(); //User들의 정보를 가지고 오겠다
 	    */
 	    
-	    // 기존 방법 >> session.getAttribute("userid")
-	    // 로그인한 사용자ID
-	    // n.setWriter(userinfo.getUsername());
-	    
-	    // 가장 간편한 방법
-	    // public String noticeReg(Notice n , HttpServletRequest request, Principal principal)
-	    // Principal Interface 정의 >> 인증 성공되면 인증에 대한 정보를 담은 객체의 주소를 자동으로 받을 수 있음
+	    //session.getAttribute("userid") 기존방법 ....
+	    //로그인한 사용자 ID
+	   
+	    //가장 간편한 방법
+	    //public String noticeReg(Notice n , HttpServletRequest request , Principal principal)
+	    //Principal 인터페이스를 정의하면 ... 인증성공되면 정보를 담은 객체의 주소를 받을 수 있다 ..자동으로 ..
+	    //인증되면 인증 객체를 정보를 받는다
 	    n.setWriter(principal.getName().trim());
 	    
 	    
