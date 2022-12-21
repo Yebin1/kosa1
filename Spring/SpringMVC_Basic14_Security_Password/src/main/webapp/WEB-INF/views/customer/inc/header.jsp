@@ -40,9 +40,7 @@
       </ul>
       <h3 class="hidden">회원메뉴</h3>
       <ul id="membermenu" class="clear">
-         <li><a href=""><img
-               src="${pageContext.request.contextPath}/images/menuMyPage.png"
-               alt="마이페이지" /></a></li>
+         <li><a href="${pageContext.request.contextPath}/joinus/memberconfirm.htm">마이페이지</a></li>
          <li><a
             href="${pageContext.request.contextPath}/customer/notice.htm"><img
                src="${pageContext.request.contextPath}/images/menuCustomer.png"

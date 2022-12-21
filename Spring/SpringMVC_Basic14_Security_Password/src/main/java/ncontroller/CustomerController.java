@@ -53,10 +53,10 @@ public class CustomerController {
 	
 	
 	@PostMapping(value="noticeReg.htm")
-	public String noticeReg(Notice n , HttpServletRequest request, Principal principal) {
+	public String noticeReg(Notice n , HttpServletRequest request , Principal  principal) {
 		  String url = null;
 		  try {
-			    url = customerservice.noticeReg(n, request, principal);
+			    url = customerservice.noticeReg(n, request , principal);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -81,6 +81,7 @@ public class CustomerController {
 	@PostMapping(value="noticeEdit.htm")
 	public String noticeEdit(Notice n , HttpServletRequest request) {
 		 return customerservice.noticeEdit(n, request);
+		
 	}
 	
 	

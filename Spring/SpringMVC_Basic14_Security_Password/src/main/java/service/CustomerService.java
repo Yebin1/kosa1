@@ -14,6 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
@@ -83,7 +87,7 @@ public class CustomerService {
 	
 	
 	//글쓰기처리 서비스
-	public String noticeReg(Notice n , HttpServletRequest request, Principal principal) {
+	public String noticeReg(Notice n , HttpServletRequest request , Principal principal) {
 	  
 	    List<CommonsMultipartFile> files = n.getFiles();
 	    List<String> filenames = new ArrayList<String>(); //파일명 관리
@@ -117,39 +121,39 @@ public class CustomerService {
 	    }
 	    
 	    //
-	    //	Spring Security 인증처리 하기
-	    //	(Spring Security 생성한 객체정보를 가지고 와서 필요한 정보 추출)
-	    //	필요한정보: 로그인한 ID, 권한정보 (여러개: ROLE_ADMIN or ROLE_USER)
+	    // Spring Security 인증처리 하기 
+	    // (Spring Security 생성한 객체정보를 가지고 와서 필요한 정보 추출)
+	    //  필요한 정보 : 로그인한 ID , 권한정보 (여러개: ROLE_ADMIN or ROLE_USER)
 	    
 	    /*
-	    
+	       사용할때는 사용자의 권한정보까지 필요하다면 ... 
 	    SecurityContext context = SecurityContextHolder.getContext(); //스프링 시큐리티 전체 정보
-	    Authentication auth = context.getAuthentication(); // 인증관련된것만
+	    Authentication auth = context.getAuthentication(); // 인증에 관련만 것만
 	    
-	    UserDetails userinfo = (UserDetails)auth.getPrincipal(); //인증된 사용자 정보만
+	    UserDetails userinfo = (UserDetails) auth.getPrincipal(); //인증된 사용자 정보만
 	    
-	    System.out.println("권한정보: " + userinfo.getAuthorities());
-	    System.out.println("사용자정보: " + userinfo.getUsername());
-	    
+	    System.out.println("권한정보 : " + userinfo.getAuthorities());
+	    System.out.println("사용자ID: " + userinfo.getUsername());
+	    n.setWriter(userinfo.getUsername());
 	    */
+	    
 	    /*
-	     	새련된 방식)))))
-	  	 UserDetails user = (UserDetails)SecurityContextHolder.
-                            getContext().
-                            getAuthentication().
-                            getPrincipal(); //User들의 정보를 가지고 오겠다
-	     */
+	       체인방법으로 기술하는 것이 좋아요 
+	    UserDetails user = (UserDetails)SecurityContextHolder.
+                getContext().
+                getAuthentication().
+                getPrincipal(); //User들의 정보를 가지고 오겠다
+	    */
 	    
-	    
-	    //session.getAttribute("userid") 기존방법 ...
+	    //session.getAttribute("userid") 기존방법 ....
 	    //로그인한 사용자 ID
-		/* n.setWriter(userinfo.getUsername()); */
-	    
+	   
 	    //가장 간편한 방법
-	    //public String noticeReg(Notice n, HttpServletRequest request, Principal principal)
-	    //Principal 인터페이스를 정의하면 ... 인증성공되면 정보를 담은 객체의 주소를 받을 수 있다.. 자동으로..
-	    
+	    //public String noticeReg(Notice n , HttpServletRequest request , Principal principal)
+	    //Principal 인터페이스를 정의하면 ... 인증성공되면 정보를 담은 객체의 주소를 받을 수 있다 ..자동으로 ..
+	    //인증되면 인증 객체를 정보를 받는다
 	    n.setWriter(principal.getName().trim());
+	    
 	    
 		//파일명 (DTO)
 		n.setFileSrc(filenames.get(0));

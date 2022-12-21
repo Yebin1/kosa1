@@ -8,21 +8,24 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import dto.Member;
-import service.MemberService;
+import service.JoinService;
 
 @Controller
 @RequestMapping("/joinus/")
 public class JoinController {
 
 	// memberDao 의존
-	// private MemberDao memberdao;
+	private JoinService joinservice;
 
 	///////////////////////////////////////////////////////
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
-	///////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////// 
 
-	private MemberService memberservice;
+	@Autowired
+	public void setJoinService(JoinService joinservice) {
+		this.joinservice = joinservice;
+	}
 
 	// GET 요청
 	// join.jsp 화면처리
@@ -40,7 +43,7 @@ public class JoinController {
 		System.out.println(member.toString());
 		try {
 			member.setPwd(this.bCryptPasswordEncoder.encode(member.getPwd()));
-			memberservice.insertMember(member);
+			joinservice.insertMember(member);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,5 +58,4 @@ public class JoinController {
 	public String login() {
 		return "joinus/login";
 	}
-	
 }
