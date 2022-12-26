@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Hello from './components/Hello';
+import MyComponents from './components/MyComponents';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(  // 루트를 렌더링
-  <React.StrictMode>
-    <App />
-    {/* App 안에 출력되길 원하는 자손을 넣어주기 */}
-  </React.StrictMode>
+  <>
+  <App />
+  {/* <MyComponents /> */}
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

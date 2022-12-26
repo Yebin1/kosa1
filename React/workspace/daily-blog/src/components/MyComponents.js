@@ -8,7 +8,7 @@ console.log([2, 5, 9].forEach(LogArrayElements));
 class MyComponents extends Component {
 
     /*
-     constructor(){
+     constructor(){ // constructor(props)
         this.state = {
             // 변수가 여러 개 >> 객체 타입으로
             // key, value 방식으로 값을 넣음
@@ -32,23 +32,26 @@ class MyComponents extends Component {
 
     render() {
 
+        const {name, str} = this.props;
         // const {message} = this.state;
         const {message, number, validate, messages} = this.state;
-        let name = 'yuna';
+        let irm = 'yuna';
         let x,y,z =3;
 
         return (
             <>
                 <h3>Hello {message}</h3>
-                <h3>{name}님 반갑습니다</h3>
+                <h3>{irm}님 반갑습니다</h3>
                 <span>{number}님 필요하신 것 있으세요?</span>
                 <h2>{validate}</h2>
                 <h3>{messages}</h3>
                 <h3>{messages[3]}</h3>
-                <h3>messages.map</h3>
+                <h3>messages.map()</h3>
+                <h4>{messages.map((item, i, arr) => console.log(item + ', ' + i))}</h4>
                 <h4>{messages.map((name, index) => (index + " : " + name + ", "))}</h4>
                 <h3>{x},{y},{z}</h3>
 
+                <h1>{name}</h1>
             </>
         )
     }
