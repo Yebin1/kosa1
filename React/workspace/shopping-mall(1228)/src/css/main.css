@@ -1,0 +1,14 @@
+.hello {
+    width: 100px;
+    height: 30px;
+    background-color: aqua;
+}
+
+.logo {
+    width: 300px;
+    padding: 30px;
+}
+
+.bg {
+    padding: 30px;
+}

@@ -1,20 +1,16 @@
-import React, { useState } from 'react';
-import {Nav, Navbar, Container, NavDropdown, Button} from 'react-bootstrap'
-import { Link, Outlet, Route, Routes, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
+import {Nav, Navbar, Container, NavDropdown} from 'react-bootstrap'
 import './App.css';
 import bg from './images/bg.jpg'
 import Data from './data'
+import { useState } from 'react';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import Detail from './componets/Detail';
 import Cart from './componets/Cart';
 
-export let StockContext = React.createContext(); // 1. 컨텍스트 만들고
 
 function App() {
 
-   let [shirts, setShirts] = useState(Data);  //HOOK
-   let [stock] = useState([7, 13, 20])  // 재고 - Context API
+   let [shrits, setShrits] = useState(Data);  //HOOK
 
   return (
     <div className="App">
@@ -26,9 +22,8 @@ function App() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">홈</Nav.Link>
-            <Nav.Link href="/detail/0">상세페이지</Nav.Link>
+            <Nav.Link href="/detail">상세페이지</Nav.Link>
             <Nav.Link href="/cart">장바구니</Nav.Link>
-            <Link to="/event" >이벤트</Link>
             <NavDropdown title="우리회사정보" id="basic-nav-dropdown">
               <NavDropdown.Item href="/about">정보</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -45,47 +40,30 @@ function App() {
       </Container>
     </Navbar>
     <div className="jumbotron">
-      <img src={bg} width={'100%'} height={'5%'} alt='블랙핑크 티셔츠' />
+      <img src={bg} width={'100%'} height={'50%'} alt='블랙핑크 티셔츠' />
       {/* <img src={"https://thumb.cjonstyle.net/unsafe/fit-in/470x470/itemimage.cjonstyle.net/goods_images/20/759/2006298759L.jpg?timestamp=20220920083804"} width={'100%'} height={'100px'} alt='블랙핑크 티셔츠' /> */}
       <h4 className="display-4">블랙핑크 티셔츠</h4>
       <p className="lead">우리 이쁜 티셔츠 입고 되었어요.</p>
     </div>
 
+   
   <Routes>
     <Route path='/' element={
         <div className='container'>
             <div className='row'>
               {/* 배열데이터.map( ()=>{} ) */}
               {
-                shirts.map((item, i)=> {
-                  return <Card shirts={shirts[i]} i={i} key={i} />
+                shrits.map((item, i)=> {
+                  return <Card shrits={shrits[i]} i={i} key={i} />
                 })
               }  
             </div>
-            
-        <button onClick={() =>{
-            axios.get('https://raw.githubusercontent.com/ai-edu-pro/busan/main/data2.json')
-            // axios.get('https://raw.githubusercontent.com/TWKIM0709/DataBaseGit/main/cheese.json')
-            .then((result)=>{ 
-              let newShirts = [...shirts, ...result.data]
-              setShirts(newShirts)
-              console.log(result.data);
-            })
-            .catch(()=>{console.log('data fail'); })
-            }}
-        className='btn btn-primary'>더보기</button>
-
         </div>
       }
     />
 
-
     <Route path='/cart' element={<Cart />}  />
-    <Route path='/detail/:id' element={
-        <StockContext.Provider value={{stock}}>
-          <Detail shirts={shirts} />
-        </StockContext.Provider>
-    }/>
+    <Route path='/detail' element={ <Detail shrits={shrits[0]}/>} />
 
     <Route path='/about' element={<About />}>
       <Route path='emp' element={<div>너는 우리 직원이야</div>} />
@@ -100,19 +78,6 @@ function App() {
     </Route>
 
   </Routes>   
-  
-
-  {/* <button onClick={()=>{   // JSON --> object/array  자동으로 변환 못한다. 직접 변환해줘야한다.
-    fetch('url').then(res=> res.json()).then((result)=>{ console.log(result);})
-  }}>fetch()</button> */}
-
-  {/* <button onClick={()=>{
-    axios.post('URL', {name:'yuna'}).then().catch()
-
-    Promise.all([axios.get('URL1'), axios.get('URL2')]).then(1).then(2).catch()
-  }}
-  className='btn btn-success'>추가</button> */}
-
   </div>
   );
 }  // end App.js
@@ -136,23 +101,17 @@ function EventPage() {
 } // end EventPage.js
 
 // '문자'+변수+'문자'  ==> `문자 ${변수} 문자`
-//function Card({shirts, i}) {
+//function Card({shrits, i}) {
 function Card(props) {
-
-  let navigate = useNavigate();
-
   return(
     <div className='container'>
       <div className='row'>
         <div className='col-md-6'>
           {/* <img src={"https://raw.githubusercontent.com/ai-edu-pro/busan/main/t" + (props.i) + ".jpg"} width='100%'/> */}
-          <img onClick={()=>{ navigate(`/detail/${props.shirts.id}`) }}
-               src={`https://raw.githubusercontent.com/ai-edu-pro/busan/main/t${(props.i)+1}.jpg`} width='100%'/>
-          {/* <h4>{props.shirts.title}</h4>
-          <p>{props.shirts.content}</p>
-          <p>{props.shirts.price}</p> */}
-          {/* <Button>주문하기</Button> */}
-          
+          <img src={`https://raw.githubusercontent.com/ai-edu-pro/busan/main/t${(props.i)+1}.jpg`} width='100%'/>
+          <h4>{props.shrits.title}</h4>
+          <p>{props.shrits.content}</p>
+          <p>{props.shrits.price}</p>
         </div>
       </div>
     </div>

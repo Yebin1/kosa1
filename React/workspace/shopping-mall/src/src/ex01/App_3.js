@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {Nav, Navbar, Container, NavDropdown, Button} from 'react-bootstrap'
 import { Link, Outlet, Route, Routes, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import './App.css';
 import bg from './images/bg.jpg'
-import Data from './data'
-import Detail from './componets/Detail';
-import Cart from './componets/Cart';
+import Data from '../data'
+import Detail from '../componets/Detail';
+import Cart from '../componets/Cart';
 
-export let StockContext = React.createContext(); // 1. 컨텍스트 만들고
 
 function App() {
 
    let [shirts, setShirts] = useState(Data);  //HOOK
-   let [stock] = useState([7, 13, 20])  // 재고 - Context API
 
   return (
     <div className="App">
@@ -51,6 +49,18 @@ function App() {
       <p className="lead">우리 이쁜 티셔츠 입고 되었어요.</p>
     </div>
 
+    <button onClick={() =>{
+      axios.get('https://raw.githubusercontent.com/ai-edu-pro/busan/main/data2.json')
+      // axios.get('https://raw.githubusercontent.com/TWKIM0709/DataBaseGit/main/cheese.json')
+      .then((result)=>{ 
+        let newShirts = [...shirts, ...result.data]
+        setShirts(newShirts)
+        console.log(result.data);
+       })
+      .catch(()=>{console.log('data fail'); })
+  }}
+    className='btn btn-primary'>더보기</button>
+    
   <Routes>
     <Route path='/' element={
         <div className='container'>
@@ -62,30 +72,12 @@ function App() {
                 })
               }  
             </div>
-            
-        <button onClick={() =>{
-            axios.get('https://raw.githubusercontent.com/ai-edu-pro/busan/main/data2.json')
-            // axios.get('https://raw.githubusercontent.com/TWKIM0709/DataBaseGit/main/cheese.json')
-            .then((result)=>{ 
-              let newShirts = [...shirts, ...result.data]
-              setShirts(newShirts)
-              console.log(result.data);
-            })
-            .catch(()=>{console.log('data fail'); })
-            }}
-        className='btn btn-primary'>더보기</button>
-
         </div>
       }
     />
 
-
     <Route path='/cart' element={<Cart />}  />
-    <Route path='/detail/:id' element={
-        <StockContext.Provider value={{stock}}>
-          <Detail shirts={shirts} />
-        </StockContext.Provider>
-    }/>
+    <Route path='/detail/:id' element={ <Detail shirts={shirts}/>} />
 
     <Route path='/about' element={<About />}>
       <Route path='emp' element={<div>너는 우리 직원이야</div>} />

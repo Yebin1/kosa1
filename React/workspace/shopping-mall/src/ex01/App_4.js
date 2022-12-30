@@ -5,9 +5,9 @@ import axios from 'axios';
 
 import './App.css';
 import bg from './images/bg.jpg'
-import Data from './data'
-import Detail from './componets/Detail';
-import Cart from './componets/Cart';
+import Data from '../data'
+import Detail from '../componets/Detail';
+import Cart from '../componets/Cart';
 
 export let StockContext = React.createContext(); // 1. 컨텍스트 만들고
 
