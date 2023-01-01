@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.common.dao.MemberDao">
+
+	<!-- Member getMember(String uid) -->
+	<select id="getMember" resultType="com.common.dto.Member">
+		select * from MEMBER order by
+		userid
+	</select>
+
+	<!-- int insert(Emp emp) -->
+	<insert id="insert" parameterType="com.common.dto.Member">
+		insert into member(userid,
+		pwd, name, email)
+		values(#{userid}, #{pwd}, #{name}, #{email})
+	</insert>
+
+	<!-- userid Check(String id) -->
+	<select id="idCheck" parameterType="String" resultType="String">
+		select userid from MEMBER
+		where USERID=#{userid}
+	</select>
+
+
+</mapper>
+
+
+
+
+
