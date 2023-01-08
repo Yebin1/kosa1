@@ -77,8 +77,6 @@ select * from pl_test;
 --두개의 정수를 입력받아서 그 합을   변수에 담아서 출력
 
 
-
-
 DECLARE
   v_no1 number := '&no1';
   v_no2 number := '&no2';
