@@ -1,0 +1,15 @@
+ @GetMapping("/mysql")
+    public ResponseEntity<List<Spring>> list() {
+       List<Spring> list = new ArrayList<Spring>();
+       try {
+          list = springservice.select();
+          return new ResponseEntity<List<Spring>>(list, HttpStatus.OK);
+       } catch (Exception e) {
+          return new ResponseEntity<List<Spring>>(list, HttpStatus.BAD_REQUEST);      
+          }
+    }
+
+// App.js
+const SERVER_URL = '/controller/mysql';
+context root: controller
+Getmapping: mysql
