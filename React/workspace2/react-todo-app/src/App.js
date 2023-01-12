@@ -42,26 +42,23 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="flex items-center justify-center w-screen h-screen bg-blue-50">
 
-      <div className="container">
-        <div className="todoBlock">
-          <div className="title">
-            <h1>To Do</h1>
+      <div className="w-full p-5 m-4 bg-white rounded shadow lg:w-3/4 lg:max-w-lg">
+        <div>
+          <div>
+            <h1 className="flex justify-between mb-3 ">To Do List</h1>
           </div>
 
           <List todoData={todoData} setTodoData={setTodoData} />
           <Form handleSubmit={handleSubmit} value={value} setValue={setValue} />
 
-        </div> {/* todoBlock */}
-      </div> {/* container */}
+        </div>
+      </div>
 
-      <div>
-        <table style={
-          {
-            textAlign: 'left',
-          }
-        }>
+      <br></br>
+      <div className="flex items-center justify-center">
+        <table>
           <thead>
             <th>ID</th>
             <th>NAME</th>
